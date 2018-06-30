@@ -1,0 +1,74 @@
+ril/src/ril_atResponse.c: In function 'Ql_RIL_AT_SetErrCode':
+ril/src/ril_atResponse.c:50:1: warning: control reaches end of non-void function [-Wreturn-type]
+ s32 Ql_RIL_AT_SetErrCode(s32 errCode) {m_iErrCode = errCode;}
+ ^
+ril/src/ril_socket.c: In function 'ATRsp_Soc_Create_Handler':
+ril/src/ril_socket.c:87:12: warning: pointer targets in assignment differ in signedness [-Wpointer-sign]
+          p = head + Ql_strlen("\r\n+QSOC=");
+            ^
+ril/src/ril_socket.c:89:10: warning: pointer targets in passing argument 1 of 'Ql_atoi' differ in signedness [-Wpointer-sign]
+          *state = Ql_atoi(p);   
+          ^
+In file included from ril/src/ril_socket.c:37:0:
+include/ql_stdlib.h:39:8: note: expected 'const char *' but argument is of type 'u8 *'
+ s32    Ql_atoi(const char* s);
+        ^
+ril/src/ril_urc.c: In function 'OnURCHandler_RECV_DATA':
+ril/src/ril_urc.c:168:3: warning: pointer targets in passing argument 2 of 'QSDK_Get_Str' differ in signedness [-Wpointer-sign]
+   QSDK_Get_Str(p1,recv_buffer,2);
+   ^
+ril/src/ril_urc.c:109:6: note: expected 'char *' but argument is of type 'u8 *'
+ char QSDK_Get_Str(char *src_string,  char *dest_string, unsigned char index)
+      ^
+ril/src/ril_urc.c:169:9: warning: passing argument 4 of 'Ql_OS_SendMessage' makes integer from pointer without a cast [enabled by default]
+         Ql_OS_SendMessage(URC_RCV_TASK_ID, MSG_ID_URC_INDICATION, URC_SOCKET_RECV_DATA, recv_buffer);
+         ^
+In file included from ril/src/ril_urc.c:37:0:
+include/ql_system.h:194:5: note: expected 'u32' but argument is of type 'u8 *'
+ s32 Ql_OS_SendMessage(s32 destTaskId, u32 msgId, u32 param1, u32 param2);
+     ^
+ril/src/ril_urc.c:160:9: warning: unused variable 'len' [-Wunused-variable]
+     s32 len;
+         ^
+ril/src/ril_urc.c: At top level:
+ril/src/ril_urc.c:262:13: warning: 'OnURCHandler_InitStat' defined but not used [-Wunused-function]
+ static void OnURCHandler_InitStat(const char* strURC, void* reserved)
+             ^
+example/example_multitask.c: In function 'SendEvent2AllSubTask':
+example/example_multitask.c:185:9: warning: variable 'iRet' set but not used [-Wunused-but-set-variable]
+     int iRet = 0;
+         ^
+example/example_multitask.c: In function 'CallBack_UART_Hdlr':
+example/example_multitask.c:244:19: warning: pointer targets in assignment differ in signedness [-Wpointer-sign]
+             pData = m_Read_Buffer;
+                   ^
+example/example_multitask.c:233:19: warning: variable 'rdLen' set but not used [-Wunused-but-set-variable]
+     u32 iTmp,iNum,rdLen=0;
+                   ^
+example/example_multitask.c: At top level:
+example/example_multitask.c:93:13: warning: 'textBuf' defined but not used [-Wunused-variable]
+ static char textBuf[128];  
+             ^
+example/example_multitask.c:230:13: warning: 'CallBack_UART_Hdlr' defined but not used [-Wunused-function]
+ static void CallBack_UART_Hdlr(Enum_SerialPort port, Enum_UARTEventType msg, bool level, void* customizedPara)
+             ^
+example/utility.c: In function 'Check_Separator':
+example/utility.c:45:5: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+     while (pChar1 = Ql_strstr(pConnCfg, "<"))
+     ^
+example/utility.c:52:5: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+     while (pChar1 = Ql_strstr(pConnCfg, ">"))
+     ^
+example/utility.c:59:5: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+     while (pChar1 = Ql_strstr(pConnCfg, ">,<"))
+     ^
+example/utility.c:42:11: warning: unused variable 'pChar2' [-Wunused-variable]
+     char* pChar2;
+           ^
+example/utility.c: In function 'Analyse_Command':
+example/utility.c:103:5: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+     if (q = (u8*)Ql_strstr((char*)src_str,"\r\n"))//remove\r\n
+     ^
+example/utility.c:120:17: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+                 if (p[i+1] = (u8*)Ql_strstr((char*)p[i],">"))
+                 ^

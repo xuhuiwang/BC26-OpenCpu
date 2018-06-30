@@ -62,7 +62,7 @@
 
 #define DEBUG_ENABLE 1
 #if DEBUG_ENABLE > 0
-#define DEBUG_PORT  UART_PORT1
+#define DEBUG_PORT  UART_PORT2
 #define DBG_BUF_LEN   512
 static char DBG_BUFFER[DBG_BUF_LEN];
 #define APP_DEBUG(FORMAT,...) {\
@@ -206,11 +206,11 @@ void proc_main_task(s32 taskId)
     ST_MSG msg;
 
     // Register & open UART port
-    Ql_UART_Register(UART_PORT1, CallBack_UART_Hdlr, NULL);
-    Ql_UART_Open(UART_PORT1, 115200, FC_NONE);
+//    Ql_UART_Register(UART_PORT1, CallBack_UART_Hdlr, NULL);
+//    Ql_UART_Open(UART_PORT1, 115200, FC_NONE);
 
-    Ql_UART_Register(UART_PORT2, CallBack_UART_Hdlr, NULL);
-    Ql_UART_Open(UART_PORT2, 115200, FC_NONE);
+    //Ql_UART_Register(UART_PORT2, CallBack_UART_Hdlr, NULL);
+   // Ql_UART_Open(UART_PORT2, 115200, FC_NONE);
 
     APP_DEBUG("\r\n<--OpenCPU: multitask TEST!-->\r\n");  
 
@@ -638,7 +638,8 @@ void proc_subtask5(s32 TaskId)
 void proc_subtask6(s32 TaskId)
 {
     bool keepGoing = TRUE;
-    ST_MSG subtask6_msg;
+    ST_MSG subtask6_msg;
+
     
     Ql_Debug_Trace("<--multitask: example_task6_entry-->\r\n");
 

@@ -12,6 +12,49 @@
 			"settings":
 			{
 				"buffer_size": 5146,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "include/ql_uart.h",
+			"settings":
+			{
+				"buffer_size": 8900,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "example/example_multitask.c",
+			"settings":
+			{
+				"buffer_size": 25252,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "make/gcc/gcc_makefile",
+			"settings":
+			{
+				"buffer_size": 2865,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "custom/config/custom_sys_cfg.c",
+			"settings":
+			{
+				"buffer_size": 4917,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "custom/config/custom_task_cfg.h",
+			"settings":
+			{
+				"buffer_size": 2790,
 				"line_ending": "Windows"
 			}
 		}
@@ -48,15 +91,22 @@
 	},
 	"expanded_folders":
 	[
-		"/D/BC26 OpenCpu/SDK_n_LIB_2_customer",
-		"/D/BC26 OpenCpu/SDK_n_LIB_2_customer/build",
-		"/D/BC26 OpenCpu/SDK_n_LIB_2_customer/build/gcc",
-		"/D/BC26 OpenCpu/SDK_n_LIB_2_customer/custom",
-		"/D/BC26 OpenCpu/SDK_n_LIB_2_customer/custom/config",
-		"/D/BC26 OpenCpu/SDK_n_LIB_2_customer/example"
+		"/D/git code share wxh/BC26 OpenCpu/SDK_n_LIB_2_customer",
+		"/D/git code share wxh/BC26 OpenCpu/SDK_n_LIB_2_customer/build",
+		"/D/git code share wxh/BC26 OpenCpu/SDK_n_LIB_2_customer/build/gcc",
+		"/D/git code share wxh/BC26 OpenCpu/SDK_n_LIB_2_customer/custom",
+		"/D/git code share wxh/BC26 OpenCpu/SDK_n_LIB_2_customer/custom/config",
+		"/D/git code share wxh/BC26 OpenCpu/SDK_n_LIB_2_customer/include",
+		"/D/git code share wxh/BC26 OpenCpu/SDK_n_LIB_2_customer/make",
+		"/D/git code share wxh/BC26 OpenCpu/SDK_n_LIB_2_customer/make/gcc",
+		"/D/git code share wxh/BC26 OpenCpu/SDK_n_LIB_2_customer/ril",
+		"/D/git code share wxh/BC26 OpenCpu/SDK_n_LIB_2_customer/ril/src"
 	],
 	"file_history":
 	[
+		"/C/Users/WangXuhui/Documents/GitHub/DaBaiNB-IOT_stm32L051/DaBai_Src/main.c",
+		"/D/git code share wxh/BC26 OpenCpu/SDK_n_LIB_2_customer/include/ql_system.h",
+		"/D/git code share wxh/BC26 OpenCpu/SDK_n_LIB_2_customer/build/gcc/build.log",
 		"/D/BC26 OpenCpu/SDK_n_LIB_2_customer/example/example_gpio.c",
 		"/D/BC26 OpenCpu/SDK_n_LIB_2_customer/include/ql_uart.h",
 		"/D/BC26 OpenCpu/SDK_n_LIB_2_customer/custom/main.c",
@@ -121,7 +171,7 @@
 	],
 	"find":
 	{
-		"height": 25.0
+		"height": 40.0
 	},
 	"find_in_files":
 	{
@@ -135,6 +185,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"proc_subtask1"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -168,8 +219,66 @@
 						"selection":
 						[
 							[
-								0,
-								0
+								5118,
+								5118
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 2251.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "include/ql_uart.h",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 8900,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								8900,
+								8900
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 3483.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "example/example_multitask.c",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 25252,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								11332,
+								11332
 							]
 						],
 						"settings":
@@ -179,10 +288,96 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1152.0,
+						"translation.y": 5093.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "make/gcc/gcc_makefile",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2865,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								882,
+								903
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "custom/config/custom_sys_cfg.c",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4917,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4917,
+								4917
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1180.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "custom/config/custom_task_cfg.h",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2790,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2744,
+								2744
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 556.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
 					"type": "text"
 				}
 			]
@@ -224,7 +419,7 @@
 		"height": 0.0
 	},
 	"pinned_build_system": "",
-	"project": "sublime project.sublime-project",
+	"project": "BC26OPCPU SublimePrj.sublime-project",
 	"replace":
 	{
 		"height": 46.0
@@ -265,7 +460,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 211.0,
+	"side_bar_width": 231.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
