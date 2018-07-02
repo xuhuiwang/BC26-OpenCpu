@@ -163,10 +163,10 @@ void proc_main_task(s32 taskId)
     while (TRUE)
     {
         //Ql_OS_GetMessage(&msg);
-        //Ql_GPIO_SetLevel(PINNAME_NETLIGHT, PINLEVEL_HIGH);
+        ////Ql_GPIO_SetLevel(PINNAME_NETLIGHT, PINLEVEL_HIGH);
         Ql_Sleep(500);
         GPIO_TogglePin(PINNAME_NETLIGHT);
-        APP_DEBUG("\r\n<-- OpenCPU:  GPIO_Toggle loop -->\r\n");
+        APP_DEBUG("\r\n<--DaBai OpenCPU:  GPIO_Toggle loop -->\r\n");
         switch(msg.message)
         {
         case MSG_ID_USER_START:

@@ -66,7 +66,10 @@ TASK_ITEM(proc_subtask8,  subtask8_id, 1*1024, DEFAULT_VALUE1, DEFAULT_VALUE2)
 #endif
 
 
-
+#ifdef __EXAMPLE_GPIO__
+TASK_ITEM(proc_subtask1,  subtask1_id, 1*1024, DEFAULT_VALUE1, DEFAULT_VALUE2)
+TASK_ITEM(proc_subtask2,  subtask2_id, 1*1024, DEFAULT_VALUE1, DEFAULT_VALUE2)
+#endif
 
 /**
  ******* TAST CONFIG END ********

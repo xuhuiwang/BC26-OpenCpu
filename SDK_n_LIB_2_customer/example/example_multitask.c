@@ -58,6 +58,7 @@
 #include "ql_system.h"
 #include "ql_stdlib.h"
 #include "ql_error.h"
+#include "ql_gpio.h"
 
 
 #define DEBUG_ENABLE 1
@@ -81,25 +82,57 @@ static char DBG_BUFFER[DBG_BUF_LEN];
 
 
 
-#define MAX_TASK_NUM                    11
+#define MAX_TASK_NUM                    10
 #define MSG_ID_USER_DATA                MSG_ID_USER_START+0x100
 #define MSG_ID_MUTEX_TEST               MSG_ID_USER_START+0x101
 #define MSG_ID_SEMAPHORE_TEST           MSG_ID_USER_START+0x102
 #define MSG_ID_GET_ALL_TASK_PRIORITY    MSG_ID_USER_START+0x103
 #define MSG_ID_GET_ALL_TASK_REMAINSTACK MSG_ID_USER_START+0x104
 
-
+#define LED_ON      Ql_GPIO_SetLevel(PINNAME_NETLIGHT, PINLEVEL_HIGH) 
+#define LED_OFF     Ql_GPIO_SetLevel(PINNAME_NETLIGHT, PINLEVEL_LOW)
+#define LED_TOGGLE  GPIO_TogglePin(PINNAME_NETLIGHT)
 
 static char textBuf[128];  
 static int  s_iMutexId = 0;
 static int  s_iSemaphoreId = 0;
 static int  s_iSemMutex = 0;
 static int  s_iTestSemNum = 3;
-static int  s_iPassTask = 1;
+static int  s_iPassTask = 3;
     
 
 
 static u8 m_Read_Buffer[1024];
+
+
+static void GPIO_Program(void)
+{
+    // Initialize the GPIO pin (output high level, pull up)
+    Ql_GPIO_Init(PINNAME_NETLIGHT, PINDIRECTION_OUT, PINLEVEL_HIGH, PINPULLSEL_PULLUP);
+    Ql_Sleep(500);
+    LED_OFF;
+    Ql_Sleep(500);
+    LED_ON;
+    Ql_Sleep(500);
+    LED_OFF;
+}
+
+void GPIO_TogglePin(Enum_PinName pinName)
+{
+    static u8 lock = 0;
+    if(lock == 0)
+    {
+        lock = 1;
+       Ql_GPIO_SetLevel(pinName, PINLEVEL_LOW); 
+    }
+    else
+    {
+        lock = 0;
+        Ql_GPIO_SetLevel(pinName, PINLEVEL_HIGH); 
+    }
+
+}
+
 
 static void CallBack_UART_Hdlr(Enum_SerialPort port, Enum_UARTEventType msg, bool level, void* customizedPara);
 
@@ -209,18 +242,26 @@ void proc_main_task(s32 taskId)
 //    Ql_UART_Register(UART_PORT1, CallBack_UART_Hdlr, NULL);
 //    Ql_UART_Open(UART_PORT1, 115200, FC_NONE);
 
-    //Ql_UART_Register(UART_PORT2, CallBack_UART_Hdlr, NULL);
-   // Ql_UART_Open(UART_PORT2, 115200, FC_NONE);
+    Ql_UART_Register(UART_PORT2, CallBack_UART_Hdlr, NULL);
+    //Ql_UART_Open(UART_PORT2, 115200, FC_NONE);
 
-    APP_DEBUG("\r\n<--OpenCPU: multitask TEST!-->\r\n");  
-
+    APP_DEBUG("\r\n<--DaBai OpenCPU: multitask TEST!-->\r\n");  
+    GPIO_Program();
     while (1)
     {
-         Ql_OS_GetMessage(&msg);
+        Ql_OS_GetMessage(&msg);
+        APP_DEBUG("\r\n<--main task get msg-->\r\n");  
+        Ql_Sleep(500);
+        s_iPassTask = subtask1_id;
+        Ql_OS_SendMessage(s_iPassTask,MSG_ID_USER_DATA, 11, 22);
+
         switch(msg.message)
         {
-        case 0:
-            break;
+        case MSG_ID_USER_DATA:
+        {
+
+        }  
+        break;
         default:
             break;
         }        
@@ -235,6 +276,7 @@ static void CallBack_UART_Hdlr(Enum_SerialPort port, Enum_UARTEventType msg, boo
     char *pData=NULL;
     char *p=NULL;
     char *q=NULL;
+    
     switch (msg)
     {
         case EVENT_UART_READY_TO_READ:
@@ -343,11 +385,13 @@ void proc_subtask1(s32 TaskId)
     Ql_Debug_Trace("<--multitask: example_task1_entry-->\r\n");
     while(keepGoing)
     {    
+        LED_ON;
         Ql_OS_GetMessage(&subtask1_msg);
         switch(subtask1_msg.message)
         {
             case MSG_ID_USER_DATA:
             {
+
                APP_DEBUG("\r\n<--Sub task 1 recv MSG: SrcId=%d,MsgID=%d Data1=%d, Data2=%d-->\r\n", \
                         subtask1_msg.srcTaskId, \
                         subtask1_msg.message,\
@@ -355,12 +399,14 @@ void proc_subtask1(s32 TaskId)
                         subtask1_msg.param2);
                     if(s_iPassTask == MAX_TASK_NUM)
                     {
+                        APP_DEBUG("\r\n<--s_iPassTask1 = MAX_TASK_NUM-->\r\n"); 
                         s_iPassTask = main_task_id;
                     }
                     else
                     {
                         s_iPassTask++;
                     }
+                    APP_DEBUG("\r\n<--s_iPassTask = %d -->\r\n",s_iPassTask); 
                     Ql_OS_SendMessage(s_iPassTask, MSG_ID_USER_DATA,subtask1_msg.param1, subtask1_msg.param2);
                 
                 break;
@@ -416,12 +462,14 @@ void proc_subtask2(s32 TaskId)
                         subtask2_msg.param2);
                     if(s_iPassTask == MAX_TASK_NUM)
                     {
+                        APP_DEBUG("\r\n<--s_iPassTask2 = MAX_TASK_NUM-->\r\n"); 
                         s_iPassTask = main_task_id;
                     }
                     else
                     {
                         s_iPassTask++;
                     }
+                    APP_DEBUG("\r\n<--s_iPassTask = %d -->\r\n",s_iPassTask); 
                     Ql_OS_SendMessage(s_iPassTask, MSG_ID_USER_DATA,subtask2_msg.param1, subtask2_msg.param2);
                 
                 break;
@@ -477,12 +525,14 @@ void proc_subtask3(s32 TaskId)
                         subtask3_msg.param2);
                     if(s_iPassTask == MAX_TASK_NUM)
                     {
+                        APP_DEBUG("\r\n<--s_iPassTask3 = MAX_TASK_NUM-->\r\n"); 
                         s_iPassTask = main_task_id;
                     }
                     else
                     {
                         s_iPassTask++;
                     }
+                    APP_DEBUG("\r\n<--s_iPassTask = %d -->\r\n",s_iPassTask); 
                     Ql_OS_SendMessage(s_iPassTask, MSG_ID_USER_DATA,subtask3_msg.param1, subtask3_msg.param2);
                 
                 break;
@@ -536,12 +586,14 @@ void proc_subtask4(s32 TaskId)
                         subtask4_msg.param2);
                     if(s_iPassTask == MAX_TASK_NUM)
                     {
+                        APP_DEBUG("\r\n<--s_iPassTask4 = MAX_TASK_NUM-->\r\n"); 
                         s_iPassTask = main_task_id;
                     }
                     else
                     {
                         s_iPassTask++;
                     }
+                    APP_DEBUG("\r\n<--s_iPassTask = %d -->\r\n",s_iPassTask); 
                     Ql_OS_SendMessage(s_iPassTask, MSG_ID_USER_DATA,subtask4_msg.param1, subtask4_msg.param2);
                 
                 break;
@@ -596,12 +648,14 @@ void proc_subtask5(s32 TaskId)
                         subtask5_msg.param2);
                     if(s_iPassTask == MAX_TASK_NUM)
                     {
+                        APP_DEBUG("\r\n<--s_iPassTask5 = MAX_TASK_NUM-->\r\n"); 
                         s_iPassTask = main_task_id;
                     }
                     else
                     {
                         s_iPassTask++;
                     }
+                    APP_DEBUG("\r\n<--s_iPassTask = %d -->\r\n",s_iPassTask); 
                     Ql_OS_SendMessage(s_iPassTask, MSG_ID_USER_DATA,subtask5_msg.param1, subtask5_msg.param2);
                 
                 break;
@@ -657,12 +711,14 @@ void proc_subtask6(s32 TaskId)
                         subtask6_msg.param2);
                     if(s_iPassTask == MAX_TASK_NUM)
                     {
+                        APP_DEBUG("\r\n<--s_iPassTask6 = MAX_TASK_NUM-->\r\n"); 
                         s_iPassTask = main_task_id;
                     }
                     else
                     {
                         s_iPassTask++;
                     }
+                    APP_DEBUG("\r\n<--s_iPassTask = %d -->\r\n",s_iPassTask); 
                     Ql_OS_SendMessage(s_iPassTask, MSG_ID_USER_DATA,subtask6_msg.param1, subtask6_msg.param2);
                 
                 break;
@@ -709,6 +765,7 @@ void proc_subtask7(s32 TaskId)
         {
             case MSG_ID_USER_DATA:
             {
+               
                APP_DEBUG("\r\n<--Sub task 7 recv MSG: SrcId=%d,MsgID=%d Data1=%d, Data2=%d-->\r\n", \
                         subtask7_msg.srcTaskId, \
                         subtask7_msg.message,\
@@ -716,12 +773,14 @@ void proc_subtask7(s32 TaskId)
                         subtask7_msg.param2);
                     if(s_iPassTask == MAX_TASK_NUM)
                     {
+                        APP_DEBUG("\r\n<--s_iPassTask7 = MAX_TASK_NUM-->\r\n"); 
                         s_iPassTask = main_task_id;
                     }
                     else
                     {
                         s_iPassTask++;
                     }
+                    APP_DEBUG("\r\n<--s_iPassTask = %d -->\r\n",s_iPassTask); 
                     Ql_OS_SendMessage(s_iPassTask, MSG_ID_USER_DATA,subtask7_msg.param1, subtask7_msg.param2);
                 
                 break;
@@ -769,12 +828,22 @@ void proc_subtask8(s32 TaskId)
         {
             case MSG_ID_USER_DATA:
             {
+               LED_TOGGLE; 
                APP_DEBUG("\r\n<--Sub task 8 recv MSG: SrcId=%d,MsgID=%d Data1=%d, Data2=%d-->\r\n", \
                         subtask8_msg.srcTaskId, \
                         subtask8_msg.message,\
                         subtask8_msg.param1, \
                         subtask8_msg.param2);
+
+                if(s_iPassTask == MAX_TASK_NUM)
+                {
+                    APP_DEBUG("\r\n<--s_iPassTask8 = MAX_TASK_NUM-->\r\n"); 
+                    s_iPassTask = main_task_id;
+                }
+                APP_DEBUG("\r\n<--s_iPassTask = %d -->\r\n",s_iPassTask); 
+                Ql_OS_SendMessage(s_iPassTask, MSG_ID_USER_DATA,subtask8_msg.param1, subtask8_msg.param2);
                 break;
+
             }
             case MSG_ID_MUTEX_TEST:
             {

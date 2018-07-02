@@ -35,22 +35,19 @@ ril/src/ril_urc.c:262:13: warning: 'OnURCHandler_InitStat' defined but not used 
  static void OnURCHandler_InitStat(const char* strURC, void* reserved)
              ^
 example/example_multitask.c: In function 'SendEvent2AllSubTask':
-example/example_multitask.c:185:9: warning: variable 'iRet' set but not used [-Wunused-but-set-variable]
+example/example_multitask.c:218:9: warning: variable 'iRet' set but not used [-Wunused-but-set-variable]
      int iRet = 0;
          ^
 example/example_multitask.c: In function 'CallBack_UART_Hdlr':
-example/example_multitask.c:244:19: warning: pointer targets in assignment differ in signedness [-Wpointer-sign]
+example/example_multitask.c:286:19: warning: pointer targets in assignment differ in signedness [-Wpointer-sign]
              pData = m_Read_Buffer;
                    ^
-example/example_multitask.c:233:19: warning: variable 'rdLen' set but not used [-Wunused-but-set-variable]
+example/example_multitask.c:274:19: warning: variable 'rdLen' set but not used [-Wunused-but-set-variable]
      u32 iTmp,iNum,rdLen=0;
                    ^
 example/example_multitask.c: At top level:
-example/example_multitask.c:93:13: warning: 'textBuf' defined but not used [-Wunused-variable]
+example/example_multitask.c:96:13: warning: 'textBuf' defined but not used [-Wunused-variable]
  static char textBuf[128];  
-             ^
-example/example_multitask.c:230:13: warning: 'CallBack_UART_Hdlr' defined but not used [-Wunused-function]
- static void CallBack_UART_Hdlr(Enum_SerialPort port, Enum_UARTEventType msg, bool level, void* customizedPara)
              ^
 example/utility.c: In function 'Check_Separator':
 example/utility.c:45:5: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
