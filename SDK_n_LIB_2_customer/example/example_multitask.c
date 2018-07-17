@@ -385,7 +385,7 @@ void proc_subtask1(s32 TaskId)
     Ql_Debug_Trace("<--multitask: example_task1_entry-->\r\n");
     while(keepGoing)
     {    
-        LED_ON;
+        //LED_ON;
         Ql_OS_GetMessage(&subtask1_msg);
         switch(subtask1_msg.message)
         {
