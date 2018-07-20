@@ -1,0 +1,27 @@
+BC26_OpenCPU_SDK_BETA0703
+主要新增功能：
+1，支持RTC功能。
+当模块进入deep sleep时，RTC会唤醒模块。模块未进入deep sleep模式时，RTC的callback仍然会上报。
+注：RTC的callback中不能使用APP_DEBUG打印。
+
+2，增加sleep接口
+Ql_SleepDisable----禁止进入sleep模式
+Ql_SleepEnable-----模块进入sleep模式
+
+注：默认进入sleep模式，需要等到所有的task都IDLE，并符合进入sleep的条件，并不会立刻进入sleep
+
+
+目前支持EINT的引脚：
+    PINNAME_SPI_MISO，
+    PINNAME_SPI_MOSI，
+    PINNAME_SPI_SCLK，
+    PINNAME_SPI_CS,
+    PINNAME_NETLIGHT,
+    PINNAME_RI,
+    PINNAME_DCD,
+    PINNAME_CTS_AUX,
+    PINNAME_RTS_AUX,
+    PINNAME_RXD_AUX,
+    PINNAME_TXD_AUX,
+    PINNAME_RXD_DBG,
+    PINNAME_TXD_DBG,
