@@ -87,16 +87,13 @@ static void CallBack_UART_Hdlr(Enum_SerialPort port, Enum_UARTEventType msg, boo
 /**/
 void GPIO_TogglePin(Enum_PinName pinName)
 {
-    static u8 lock = 0;
-    if(lock == 0)
+    if(Ql_GPIO_GetLevel(pinName) == 0)
     {
-        lock = 1;
-       Ql_GPIO_SetLevel(pinName, PINLEVEL_LOW); 
+       Ql_GPIO_SetLevel(pinName,PINLEVEL_HIGH ); 
     }
     else
     {
-        lock = 0;
-        Ql_GPIO_SetLevel(pinName, PINLEVEL_HIGH); 
+        Ql_GPIO_SetLevel(pinName,PINLEVEL_LOW ); 
     }
 
 }
@@ -112,9 +109,10 @@ static void GPIO_Program(void)
     Enum_PinLevel gpioLvl = PINLEVEL_HIGH;
 
     // Initialize the GPIO pin (output high level, pull up)
-    Ql_GPIO_Init(gpioPin, PINDIRECTION_OUT, gpioLvl, PINPULLSEL_PULLUP);
-    APP_DEBUG("<-- Initialize GPIO pin (PINNAME_STATUS): output, high level, pull up -->\r\n");
-
+    Ql_GPIO_Init(gpioPin, PINDIRECTION_OUT, gpioLvl, PINPULLSEL_PULLUP);  
+    Ql_GPIO_Init(PINNAME_GPIO1, PINDIRECTION_OUT, gpioLvl, PINPULLSEL_PULLUP);
+    APP_DEBUG("<-- Initialize PINNAME_NETLIGHT: output, high level, pull up -->\r\n");
+    APP_DEBUG("<-- Initialize PINNAME_GPIO1: output, high level, pull up -->\r\n");
     // Get the direction of GPIO
     APP_DEBUG("<-- Get the GPIO direction: %d -->\r\n", Ql_GPIO_GetDirection(gpioPin));
 
@@ -154,7 +152,7 @@ void proc_main_task(s32 taskId)
         Ql_Debug_Trace("Fail to open serial port[%d], ret=%d\r\n", m_myUartPort, ret);
     }
     
-    APP_DEBUG("\r\n<-- OpenCPU: GPIO Example -->\r\n");
+    APP_DEBUG("\r\n<-- DaBai OpenCPU: GPIO Example -->\r\n");
     // Start to program GPIO pin
     GPIO_Program();
 
@@ -164,6 +162,7 @@ void proc_main_task(s32 taskId)
         //Ql_OS_GetMessage(&msg);
         Ql_Sleep(500);
         GPIO_TogglePin(PINNAME_NETLIGHT);
+        GPIO_TogglePin(PINNAME_GPIO1);
         APP_DEBUG("\r\n<--DaBai OpenCPU:  GPIO_Toggle loop -->\r\n");
         switch(msg.message)
         {

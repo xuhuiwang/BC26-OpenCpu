@@ -11,7 +11,7 @@
 			"file": "make/gcc/gcc_makefile",
 			"settings":
 			{
-				"buffer_size": 2865,
+				"buffer_size": 2860,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -20,8 +20,24 @@
 			"file": "example/example_gpio.c",
 			"settings":
 			{
-				"buffer_size": 5080,
+				"buffer_size": 5241,
 				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "include/ql_gpio.h",
+			"settings":
+			{
+				"buffer_size": 8265,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "build/gcc/build.log",
+			"settings":
+			{
+				"buffer_size": 0,
 				"line_ending": "Windows"
 			}
 		},
@@ -29,7 +45,7 @@
 			"file": "example/example_multitask.c",
 			"settings":
 			{
-				"buffer_size": 27663,
+				"buffer_size": 27669,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -75,7 +91,13 @@
 	},
 	"expanded_folders":
 	[
-		"/D/git code share wxh/BC26 OpenCpu/BC26_OpenCPU_SDK_BETA0704"
+		"/D/git code share wxh/BC26 OpenCpu/BC26NB_OpenCPU_SDK_BETA0704",
+		"/D/git code share wxh/BC26 OpenCpu/BC26NB_OpenCPU_SDK_BETA0704/build",
+		"/D/git code share wxh/BC26 OpenCpu/BC26NB_OpenCPU_SDK_BETA0704/build/gcc",
+		"/D/git code share wxh/BC26 OpenCpu/BC26NB_OpenCPU_SDK_BETA0704/example",
+		"/D/git code share wxh/BC26 OpenCpu/BC26NB_OpenCPU_SDK_BETA0704/include",
+		"/D/git code share wxh/BC26 OpenCpu/BC26NB_OpenCPU_SDK_BETA0704/make",
+		"/D/git code share wxh/BC26 OpenCpu/BC26NB_OpenCPU_SDK_BETA0704/make/gcc"
 	],
 	"file_history":
 	[
@@ -217,7 +239,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -226,15 +248,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2865,
+						"buffer_size": 2860,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								903,
-								903
+								882,
+								898
 							]
 						],
 						"settings":
@@ -245,7 +267,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
@@ -254,15 +276,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 5080,
+						"buffer_size": 5241,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								4839,
-								4839
+								2809,
+								2809
 							]
 						],
 						"settings":
@@ -272,44 +294,104 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1035.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "example/example_multitask.c",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 27663,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								7455,
-								7455
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/C++/C.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 3089.0,
+						"translation.y": 1448.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
 					"type": "text"
 				},
 				{
+					"buffer": 2,
+					"file": "include/ql_gpio.h",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 8265,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1445,
+								1458
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 405.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
 					"buffer": 3,
+					"file": "build/gcc/build.log",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1125.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "example/example_multitask.c",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 27669,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								822,
+								822
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
 					"file": "custom/config/custom_task_cfg.h",
 					"semi_transient": false,
 					"settings":
@@ -333,7 +415,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 5,
 					"type": "text"
 				}
 			]
@@ -416,7 +498,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 248.0,
+	"side_bar_width": 261.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
