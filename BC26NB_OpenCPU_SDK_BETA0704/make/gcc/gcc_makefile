@@ -18,8 +18,10 @@
 GCC_INSTALL_PATH=tools\gcc\win\gcc-arm-none-eabi
 GCC_VERSION=4.8.3
 
-
 C_PREDEF=-D __EXAMPLE_GPIO__
+# C_PREDEF=-D __EXAMPLE_MULTITASK__
+
+
 
 #-------------------------------------------------------------------------------
 # Configure version and out target

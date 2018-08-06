@@ -54,7 +54,7 @@
 
 //UART_PORT0 ->主串口
 //UART_PORT1 ->AUX串口
-//UART_PORT2 ->DEBG串口
+//UART_PORT2 ->DEBUG串口
 
 
 #define DEBUG_ENABLE 1

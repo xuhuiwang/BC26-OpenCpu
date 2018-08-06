@@ -59,7 +59,7 @@
 
 #define DEBUG_ENABLE 1
 #if DEBUG_ENABLE > 0
-#define DEBUG_PORT  UART_PORT0
+#define DEBUG_PORT  UART_PORT2
 #define DBG_BUF_LEN   512
 static char DBG_BUFFER[DBG_BUF_LEN];
 #define APP_DEBUG(FORMAT,...) {\
@@ -83,7 +83,7 @@ static char DBG_BUFFER[DBG_BUF_LEN];
 ******************************************************************/
 #define READ_BUFFER_LENGTH 1024
 static u8 m_Read_Buffer[READ_BUFFER_LENGTH];
-static Enum_SerialPort m_myUartPort  = UART_PORT0;
+static Enum_SerialPort m_myUartPort  = UART_PORT2;
 /*****************************************************************
 * callback function
 ******************************************************************/
@@ -106,7 +106,7 @@ void proc_main_task(void)
     Ql_UART_Open(m_myUartPort, 115200, FC_NONE);
 
     APP_DEBUG("\r\n<--OpenCPU: PWM TEST!-->\r\n");  
-    
+
     while (keepGoing)
     {
          Ql_OS_GetMessage(&msg);

@@ -118,18 +118,16 @@ static void GPIO_Program(void)
     LED_OFF;
 }
 
+/**/
 void GPIO_TogglePin(Enum_PinName pinName)
 {
-    static u8 lock = 0;
-    if(lock == 0)
+    if(Ql_GPIO_GetLevel(pinName) == 0)
     {
-        lock = 1;
-       Ql_GPIO_SetLevel(pinName, PINLEVEL_LOW); 
+       Ql_GPIO_SetLevel(pinName,PINLEVEL_HIGH ); 
     }
     else
     {
-        lock = 0;
-        Ql_GPIO_SetLevel(pinName, PINLEVEL_HIGH); 
+        Ql_GPIO_SetLevel(pinName,PINLEVEL_LOW ); 
     }
 
 }
@@ -242,15 +240,17 @@ void proc_main_task(s32 taskId)
     // Register & open UART port
     Ql_UART_Register(m_myUartPort, CallBack_UART_Hdlr, NULL);
     Ql_UART_Open(m_myUartPort, 115200, FC_NONE);
-
+    GPIO_Program();
     APP_DEBUG("\r\n<--DaBai OpenCPU: multitask TEST!-->\r\n");  
 
     while (1)
     {
-         Ql_OS_GetMessage(&msg);
-         APP_DEBUG("\r\n<--DaBai main task get msg-->\r\n");  
+        Ql_OS_GetMessage(&msg);
+        APP_DEBUG("\r\n<--DaBai main task get msg-->\r\n");
+        GPIO_TogglePin(PINNAME_NETLIGHT);  
         Ql_Sleep(2000);
         s_iPassTask = subtask1_id;
+        APP_DEBUG("\r\n<--s_iPassTask = %d -->\r\n",s_iPassTask); 
         Ql_OS_SendMessage(s_iPassTask,MSG_ID_USER_DATA, 11, 22);
         switch(msg.message)
         {
@@ -375,7 +375,7 @@ void proc_subtask1(s32 TaskId)
     bool keepGoing = TRUE;
     ST_MSG subtask1_msg;
     
-    Ql_Debug_Trace("<--multitask: example_task1_entry-->\r\n");
+    APP_DEBUG("<--multitask: example_task1_entry-->\r\n");
     while(keepGoing)
     {    
         Ql_OS_GetMessage(&subtask1_msg);
@@ -437,7 +437,7 @@ void proc_subtask2(s32 TaskId)
     bool keepGoing = TRUE;
     ST_MSG subtask2_msg;
 
-    Ql_Debug_Trace("<--multitask: example_task2_entry-->\r\n");
+    APP_DEBUG("<--multitask: example_task2_entry-->\r\n");
 
     while(keepGoing)
     {    
@@ -500,7 +500,7 @@ void proc_subtask3(s32 TaskId)
     bool keepGoing = TRUE;
     ST_MSG subtask3_msg;
 
-    Ql_Debug_Trace("<--multitask: example_task3_entry-->\r\n");
+    APP_DEBUG("<--multitask: example_task3_entry-->\r\n");
 
     while(keepGoing)
     {    
@@ -561,7 +561,7 @@ void proc_subtask4(s32 TaskId)
 {
     bool keepGoing = TRUE;
     ST_MSG subtask4_msg;
-    Ql_Debug_Trace("<--multitask: example_task4_entry-->\r\n");
+    APP_DEBUG("<--multitask: example_task4_entry-->\r\n");
 
     while(keepGoing)
     {    
@@ -623,7 +623,7 @@ void proc_subtask5(s32 TaskId)
     bool keepGoing = TRUE;
     ST_MSG subtask5_msg;
     
-    Ql_Debug_Trace("<--multitask: example_task5_entry-->\r\n");
+    APP_DEBUG("<--multitask: example_task5_entry-->\r\n");
 
     while(keepGoing)
     {    
@@ -686,7 +686,7 @@ void proc_subtask6(s32 TaskId)
     ST_MSG subtask6_msg;
 
     
-    Ql_Debug_Trace("<--multitask: example_task6_entry-->\r\n");
+    APP_DEBUG("<--multitask: example_task6_entry-->\r\n");
 
     while(keepGoing)
     {    
@@ -747,7 +747,7 @@ void proc_subtask7(s32 TaskId)
 {
     bool keepGoing = TRUE;
     ST_MSG subtask7_msg;
-    Ql_Debug_Trace("<--multitask: example_task7_entry-->\r\n");
+    APP_DEBUG("<--multitask: example_task7_entry-->\r\n");
 
     while(keepGoing)
     {    
@@ -809,7 +809,7 @@ void proc_subtask8(s32 TaskId)
     bool keepGoing = TRUE;
     ST_MSG subtask8_msg;
 
-    Ql_Debug_Trace("<--multitask: example_task8_entry-->\r\n");
+    APP_DEBUG("<--multitask: example_task8_entry-->\r\n");
 
     while(keepGoing)
     {    
