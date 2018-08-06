@@ -45,7 +45,7 @@
 			"file": "build/gcc/build.log",
 			"settings":
 			{
-				"buffer_size": 6353,
+				"buffer_size": 5582,
 				"line_ending": "Windows"
 			}
 		}
@@ -248,7 +248,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -276,7 +276,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
@@ -303,10 +303,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1384.0,
+						"translation.y": 1564.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
@@ -373,15 +373,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 6353,
+						"buffer_size": 5582,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								6188,
-								6195
+								0,
+								0
 							]
 						],
 						"settings":
