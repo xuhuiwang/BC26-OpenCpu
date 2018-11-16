@@ -1,0 +1,109 @@
+##==========================================================================
+ #                   Quectel OpenCPU
+ #
+ #              Copyright(c) 2012-2013 Quectel Ltd. All rights reserved.
+ #
+ #--------------------------------------------------------------------------
+ # File Description
+ # ----------------
+ #      OpenCPU makefile definition.
+ #
+ #--------------------------------------------------------------------------
+ #
+ #  Created by   :     Stanley YONG
+ #        Date   :     December 18, 2012
+ #==========================================================================
+#-------------------------------------------------------------------------------
+# Configure environment path
+#-------------------------------------------------------------------------------
+BIN_DIR=build\gcc
+OBJ_DIR=$(BIN_DIR)\obj
+BUILDLOG=$(BIN_DIR)/build.log
+ENV_PATH=$(strip $(GCC_INSTALL_PATH))/bin
+ENV_INC='$(strip $(GCC_INSTALL_PATH))/arm-none-eabi/include'
+ENV_LIB_EABI='$(strip $(GCC_INSTALL_PATH))/arm-none-eabi/lib/armv7e-m/fpu'
+ENV_LIB_GCC='$(strip $(GCC_INSTALL_PATH))/lib/gcc/arm-none-eabi/$(GCC_VERSION)/armv7e-m/fpu'
+#ENV_LIB_EABI='$(strip $(GCC_INSTALL_PATH))/arm-none-eabi/lib/fpu'
+#ENV_LIB_GCC='$(strip $(GCC_INSTALL_PATH))/lib/gcc/arm-none-eabi/$(GCC_VERSION)/fpu'
+#-------------------------------------------------------------------------------
+# Configure compiling utilities
+#-------------------------------------------------------------------------------
+CC='$(ENV_PATH)/arm-none-eabi-gcc.exe'
+LD='$(ENV_PATH)/arm-none-eabi-ld.exe'
+OBJCOPY='$(ENV_PATH)/arm-none-eabi-objcopy.exe'
+RM='$(ENV_PATH)/cs-rm.exe'
+MAKE=make/make.exe
+HEADGEN=make/GFH_Generator.exe
+#-------------------------------------------------------------------------------
+# Configure standard reference library
+#-------------------------------------------------------------------------------
+STDLIB=$(ENV_LIB_EABI)/libm.a $(ENV_LIB_EABI)/libc.a $(ENV_LIB_GCC)/libgcc.a
+#-------------------------------------------------------------------------------
+# Configure compiling options
+#-------------------------------------------------------------------------------
+#SFLAGS=-c -mlong-calls -mcpu=cortex-m4 -mlittle-endian -mfpu=vfp -mfloat-abi=soft -Wall -Wstrict-prototypes -Os -mthumb
+SALLFLAGS = -c -g -Os -mlong-calls -mthumb-interwork
+SALLFLAGS += -Wall -mlittle-endian -mthumb -mcpu=cortex-m4
+SFLAGS += $(SALLFLAGS) -flto -ffunction-sections -fdata-sections -fno-builtin
+
+#CFLAGS=-c -mlong-calls -mcpu=cortex-m4 -mlittle-endian -mfpu=vfp -mfloat-abi=soft -Wall -Wstrict-prototypes -std=c99 -Os \
+#       -ffunction-sections -pipe -ftracer -fivopts -mthumb
+
+ALLFLAGS=-c -mlittle-endian -mthumb -mcpu=cortex-m4 
+FPUFLAGS = -fsingle-precision-constant -Wdouble-promotion -mfpu=fpv4-sp-d16 -mfloat-abi=hard
+CFLAGS += $(ALLFLAGS) $(FPUFLAGS) -ffunction-sections -fdata-sections -fno-builtin
+CFLAGS += -gdwarf-2 -Os -fno-strict-aliasing -fno-common -Wstrict-prototypes
+CFLAGS += -Wimplicit-function-declaration -Wall -Werror=uninitialized -Wno-error=maybe-uninitialized #-Werror=return-type
+CFLAGS += -std=c99 -Wno-switch
+CFLAGS += -DPCFG_OS=2 -D_REENT_SMALL
+CFLAGS += -mlong-calls -mthumb-interwork
+
+# LD Flags
+LDFLAGS = $(ALLFLAGS) $(FPUFLAGS) -lnosys
+LDFLAGS += -Wl,-wrap=malloc -Wl,-wrap=calloc -Wl,-wrap=realloc -Wl,-wrap=free
+	
+#LDFLAGS += -Wl,-T libs/gcc/linkscript.ld -Wl,--gc-sections
+
+LDFLAGS=-Rbuild -X --gc-sections -T libs/gcc/linkscript.ld -nostartfiles
+
+
+C_DEF=-D MT2625 -D __OCPU_COMPILER_GCC__
+OBJCOPYFLAGS=
+#-------------------------------------------------------------------------------
+# Definition for compiling procedure
+#-------------------------------------------------------------------------------
+new: CreateDir $(BIN_DIR)/$(TARGET).bin
+	@$(HEADGEN) $(BIN_DIR)/$(TARGET).bin
+$(BIN_DIR)/$(TARGET).bin: $(BIN_DIR)/$(TARGET).elf
+	@$(OBJCOPY) $(OBJCOPYFLAGS) -O binary $< $@
+	@echo ----------------------------------------------------
+	@echo - GCC Compiling Finished Sucessfully.
+	@echo - The target image is in the '$(BIN_DIR)' directory.
+	@echo ----------------------------------------------------
+$(BIN_DIR)/$(TARGET).elf: $(OBJS)
+	@$(LD) $(LDFLAGS) -Map $(BIN_DIR)/$(TARGET).map -o $@ $(OBJS) $(USERLIB) $(STDLIB)
+
+$(OBJ_DIR)/%.o: %.S
+	@echo - Building  $@ 
+	@$(CC) $(C_DEF) $(SFLAGS) -o $@ $<
+$(OBJ_DIR)/%.o: %.c
+#	$(warning <-- Start to CC, C_PREDEF=$(C_PREDEF) -->)
+	@echo - Building  $@ 
+	@$(CC) $(C_DEF) $(C_PREDEF) $(CFLAGS) $(INCS) -o $@ $<
+CreateDir:
+	@$(RM) -f $(BIN_DIR)/$(TARGET).bin
+	@if not exist $(BIN_DIR) (md $(BIN_DIR))
+	@if not exist $(OBJ_DIR) (md $(OBJ_DIR))
+	@for /d %%y in ($(SRC_DIRS)) do \
+		@if not exist $(OBJ_DIR)/%%y ( \
+			(@echo creating direcotry $(OBJ_DIR)\%%y) & \
+			(md $ $(OBJ_DIR)\%%y))
+clean:
+	@$(RM) -f $(OBJS) $(BUILDLOG) \
+	    $(BIN_DIR)/$(TARGET).map \
+		$(BIN_DIR)/$(TARGET).bin \
+		$(BIN_DIR)/$(TARGET).elf 
+	@echo -------------------
+	@echo clean finished.
+	@echo -------------------
+.PHONY: all clean CreateDir
