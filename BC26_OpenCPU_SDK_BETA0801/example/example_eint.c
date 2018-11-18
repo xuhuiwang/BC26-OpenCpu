@@ -78,11 +78,25 @@ static char DBG_BUFFER[DBG_BUF_LEN];
 Enum_PinName pinname = PINNAME_GPIO2;
 
 // Define the UART port 
-static Enum_SerialPort m_myUartPort  = UART_PORT0;
+static Enum_SerialPort m_myUartPort  = UART_PORT2;
 
 static void CallBack_UART_Hdlr(Enum_SerialPort port, Enum_UARTEventType msg, bool level, void* customizedPara)
 {
      
+}
+
+/*GPIO 电平反转函数*/
+void GPIO_TogglePin(Enum_PinName pinName)
+{
+    if(Ql_GPIO_GetLevel(pinName) == 0)
+    {
+       Ql_GPIO_SetLevel(pinName,PINLEVEL_HIGH ); 
+    }
+    else
+    {
+        Ql_GPIO_SetLevel(pinName,PINLEVEL_LOW ); 
+    }
+
 }
 
 /*****************************************************************
@@ -96,6 +110,8 @@ void proc_main_task(s32 taskId)
     s32 ret;
     ST_MSG msg;
 
+    Ql_GPIO_Init(PINNAME_NETLIGHT, PINDIRECTION_OUT, PINLEVEL_HIGH, PINPULLSEL_PULLUP);  
+
     // Register & open UART port
     ret = Ql_UART_Register(m_myUartPort, CallBack_UART_Hdlr, NULL);
     if (ret < QL_RET_OK)
@@ -108,7 +124,7 @@ void proc_main_task(s32 taskId)
         Ql_Debug_Trace("Fail to open serial port[%d], ret=%d\r\n", m_myUartPort, ret);
     }
     
-     Ql_GPIO_Init(PINNAME_GPIO2, PINDIRECTION_IN, PINLEVEL_HIGH, PINPULLSEL_PULLUP);
+    // Ql_GPIO_Init(PINNAME_GPIO2, PINDIRECTION_IN, PINLEVEL_HIGH, PINPULLSEL_PULLUP);
     APP_DEBUG("<--OpenCPU: eint.-->\r\n"); 
     #ifdef FAST_REGISTER
     /*************************************************************
@@ -143,6 +159,11 @@ void proc_main_task(s32 taskId)
     while(TRUE)
     {
         //Ql_OS_GetMessage(&msg);
+         if(Ql_GPIO_GetLevel(PINNAME_GPIO2) == 0)
+            APP_DEBUG("\r\n<--DaBai PINNAME_GPIO2 EINT -->\r\n");
+            GPIO_TogglePin(PINNAME_NETLIGHT);
+        Ql_Sleep(50);
+         APP_DEBUG("\r\n<--DaBai loop -->\r\n");
         switch(msg.message)
         {
         case 0:

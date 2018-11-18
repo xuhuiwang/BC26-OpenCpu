@@ -180,7 +180,7 @@ void proc_main_task(s32 taskId)
              APP_DEBUG("\r\n<--DaBai PINNAME_GPIO3 EINT -->\r\n");
         Ql_Sleep(100);
         GPIO_TogglePin(PINNAME_NETLIGHT);
-/*
+
         //GPIO_TogglePin(PINNAME_GPIO1);
         //APP_DEBUG("\r\n<--DaBai OpenCPU:  GPIO_Toggle loop -->\r\n");
 
@@ -189,10 +189,10 @@ void proc_main_task(s32 taskId)
             count = 101;
             Ql_GPIO_SetLevel(PINNAME_NETLIGHT,PINLEVEL_LOW ); 
             //Ql_GPIO_SetLevel(PINNAME_GPIO1,PINLEVEL_LOW ); 
-            Ql_Sleep(100000);
+            Ql_Sleep(10000);
             Ql_SleepEnable();
         }    
-    */         
+   /* */         
         switch(msg.message)
         {
         case MSG_ID_USER_START:
