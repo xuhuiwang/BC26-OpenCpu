@@ -56,7 +56,7 @@
 
 #define DEBUG_ENABLE 1
 #if DEBUG_ENABLE > 0
-#define DEBUG_PORT  UART_PORT0
+#define DEBUG_PORT  UART_PORT2
 #define DBG_BUF_LEN   512
 static char DBG_BUFFER[DBG_BUF_LEN];
 #define APP_DEBUG(FORMAT,...) {\
@@ -75,7 +75,7 @@ static char DBG_BUFFER[DBG_BUF_LEN];
 
 
 #define FAST_REGISTER
-Enum_PinName pinname = PINNAME_NETLIGHT;
+Enum_PinName pinname = PINNAME_GPIO2;
 
 // Define the UART port 
 static Enum_SerialPort m_myUartPort  = UART_PORT0;
@@ -108,7 +108,7 @@ void proc_main_task(s32 taskId)
         Ql_Debug_Trace("Fail to open serial port[%d], ret=%d\r\n", m_myUartPort, ret);
     }
     
-
+     Ql_GPIO_Init(PINNAME_GPIO2, PINDIRECTION_IN, PINLEVEL_HIGH, PINPULLSEL_PULLUP);
     APP_DEBUG("<--OpenCPU: eint.-->\r\n"); 
     #ifdef FAST_REGISTER
     /*************************************************************
@@ -131,7 +131,7 @@ void proc_main_task(s32 taskId)
     }
     APP_DEBUG("<--OpenCPU: Ql_EINT_RegisterFast OK.-->\r\n"); 
        
-    ret = Ql_EINT_Init(pinname, EINT_LEVEL_TRIGGERED, 0, 5,0);
+    ret = Ql_EINT_Init(pinname, EINT_EDGE_FALLING, 0, 5,0);
     if(ret != 0)
     {
         APP_DEBUG("<--OpenCPU: Ql_EINT_Init fail.-->\r\n"); 
@@ -142,7 +142,7 @@ void proc_main_task(s32 taskId)
 
     while(TRUE)
     {
-        Ql_OS_GetMessage(&msg);
+        //Ql_OS_GetMessage(&msg);
         switch(msg.message)
         {
         case 0:

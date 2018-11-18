@@ -106,10 +106,12 @@ static void GPIO_Program(void)
 
     // Initialize the GPIO pin (output high level, pull up)
     Ql_GPIO_Init(gpioPin, PINDIRECTION_OUT, gpioLvl, PINPULLSEL_PULLUP);  
-    Ql_GPIO_Init(PINNAME_GPIO1, PINDIRECTION_OUT, gpioLvl, PINPULLSEL_PULLUP);
+    Ql_GPIO_Init(PINNAME_GPIO1, PINDIRECTION_IN, PINLEVEL_HIGH, PINPULLSEL_PULLUP);
+    Ql_GPIO_Init(PINNAME_GPIO2, PINDIRECTION_IN, PINLEVEL_HIGH, PINPULLSEL_PULLUP);
+    Ql_GPIO_Init(PINNAME_GPIO3, PINDIRECTION_IN, PINLEVEL_HIGH, PINPULLSEL_PULLUP);
     APP_DEBUG("<-- Initialize PINNAME_NETLIGHT: output, high level, pull up -->\r\n");
     APP_DEBUG("<-- Initialize PINNAME_GPIO1: output, high level, pull up -->\r\n");
-
+/*
     // Get the direction of GPIO
     APP_DEBUG("<-- Get the GPIO direction: %d -->\r\n", Ql_GPIO_GetDirection(gpioPin));
 
@@ -125,8 +127,9 @@ static void GPIO_Program(void)
     // Set the GPIO level to high after 500ms.
     APP_DEBUG("<-- Set the GPIO level to high after 500ms -->\r\n");
     Ql_Sleep(500);
-    Ql_GPIO_SetLevel(gpioPin, PINLEVEL_HIGH);
+    Ql_GPIO_SetLevel(gpioPin, PINLEVEL_LOW);
     APP_DEBUG("<-- Get the GPIO level value: %d -->\r\n", Ql_GPIO_GetLevel(gpioPin));
+ */
 }
 
 float tt=1.25;
@@ -138,7 +141,15 @@ void proc_main_task(s32 taskId)
 {
     s32 ret;
     ST_MSG msg;
+    u16 count = 0;
 
+     GPIO_Program();
+    if(Ql_GPIO_GetLevel(PINNAME_GPIO1) == 0)
+         APP_DEBUG("\r\n<--DaBai PINNAME_GPIO1 EINT -->\r\n");
+      if(Ql_GPIO_GetLevel(PINNAME_GPIO2) == 0)
+         APP_DEBUG("\r\n<--DaBai PINNAME_GPIO2 EINT -->\r\n");
+      if(Ql_GPIO_GetLevel(PINNAME_GPIO3) == 0)
+         APP_DEBUG("\r\n<--DaBai PINNAME_GPIO3 EINT -->\r\n");
     // Register & open UART port
     ret = Ql_UART_Register(m_myUartPort, CallBack_UART_Hdlr, NULL);
     if (ret < QL_RET_OK)
@@ -153,17 +164,35 @@ void proc_main_task(s32 taskId)
     
      APP_DEBUG("\r\n<-- DaBai OpenCPU: GPIO Example -->\r\n");
     // Start to program GPIO pin
-    GPIO_Program();
 
+    //Ql_SleepDisable();
+    Ql_SleepEnable();
     // Start message loop of this task
     while (TRUE)
     {
         //Ql_OS_GetMessage(&msg);
-        Ql_Sleep(500);
+
+        if(Ql_GPIO_GetLevel(PINNAME_GPIO1) == 0)
+             APP_DEBUG("\r\n<--DaBai PINNAME_GPIO1 EINT -->\r\n");
+          if(Ql_GPIO_GetLevel(PINNAME_GPIO2) == 0)
+             APP_DEBUG("\r\n<--DaBai PINNAME_GPIO2 EINT -->\r\n");
+          if(Ql_GPIO_GetLevel(PINNAME_GPIO3) == 0)
+             APP_DEBUG("\r\n<--DaBai PINNAME_GPIO3 EINT -->\r\n");
+        Ql_Sleep(100);
         GPIO_TogglePin(PINNAME_NETLIGHT);
-        GPIO_TogglePin(PINNAME_GPIO1);
-        APP_DEBUG("\r\n<--DaBai OpenCPU:  GPIO_Toggle loop -->\r\n");
-        APP_DEBUG("SHT_T%f\r\n",tt);
+/*
+        //GPIO_TogglePin(PINNAME_GPIO1);
+        //APP_DEBUG("\r\n<--DaBai OpenCPU:  GPIO_Toggle loop -->\r\n");
+
+        if(count++ > 100)
+        {
+            count = 101;
+            Ql_GPIO_SetLevel(PINNAME_NETLIGHT,PINLEVEL_LOW ); 
+            //Ql_GPIO_SetLevel(PINNAME_GPIO1,PINLEVEL_LOW ); 
+            Ql_Sleep(100000);
+            Ql_SleepEnable();
+        }    
+    */         
         switch(msg.message)
         {
         case MSG_ID_USER_START:

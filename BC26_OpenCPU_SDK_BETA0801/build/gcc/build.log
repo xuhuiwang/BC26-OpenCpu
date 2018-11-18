@@ -1,0 +1,5 @@
+build\gcc\obj/example/example_gpio.o: In function `GPIO_Program':
+D:\git code share wxh\BC26 OpenCpu\BC26_OpenCPU_SDK_BETA0801/example/example_gpio.c:108: multiple definition of `proc_main_task'
+build\gcc\obj/example/example_eint.o:D:\git code share wxh\BC26 OpenCpu\BC26_OpenCPU_SDK_BETA0801/example/example_eint.c:94: first defined here
+make.exe[1]: *** [build\gcc/APPGS3MDM32A01.elf] Error 1
+make: *** [all] Error 2
