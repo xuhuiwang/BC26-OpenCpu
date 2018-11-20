@@ -170,7 +170,7 @@ void proc_main_task(s32 taskId)
     // Start message loop of this task
     while (TRUE)
     {
-        //Ql_OS_GetMessage(&msg);
+        Ql_OS_GetMessage(&msg);
 
         if(Ql_GPIO_GetLevel(PINNAME_GPIO1) == 0)
              APP_DEBUG("\r\n<--DaBai PINNAME_GPIO1 EINT -->\r\n");
