@@ -17,87 +17,43 @@
 			}
 		},
 		{
-			"file": "example/example_lwm2m.c",
+			"file": "include/ql_gpio.h",
 			"settings":
 			{
-				"buffer_size": 14368,
+				"buffer_size": 8265,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "ril/src/ril_urc.c",
+			"file": "example/example_eint.c",
 			"settings":
 			{
-				"buffer_size": 19729,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "ril/src/ril_atResponse.c",
-			"settings":
-			{
-				"buffer_size": 3686,
-				"encoding": "Western (Windows 1252)",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "ril/src/ril_init.c",
-			"settings":
-			{
-				"buffer_size": 2536,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "ril/src/ril_lwm2m.c",
-			"settings":
-			{
-				"buffer_size": 13115,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "ril/inc/ril.h",
-			"settings":
-			{
-				"buffer_size": 9854,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "example/example_onenet.c",
-			"settings":
-			{
-				"buffer_size": 19592,
+				"buffer_size": 4995,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "example/example_multitask.c",
+			"file": "build/gcc/build.log",
 			"settings":
 			{
-				"buffer_size": 27786,
-				"encoding": "UTF-8",
+				"buffer_size": 21098,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "ril/src/ril_network.c",
+			"file": "include/ql_eint.h",
 			"settings":
 			{
-				"buffer_size": 4592,
-				"encoding": "Western (Windows 1252)",
+				"buffer_size": 8833,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "ril/src/ril_onenet.c",
+			"file": "custom/main.c",
 			"settings":
 			{
-				"buffer_size": 13953,
-				"encoding": "UTF-8",
+				"buffer_size": 6623,
 				"line_ending": "Windows"
 			}
 		},
@@ -107,13 +63,6 @@
 			{
 				"buffer_size": 2958,
 				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"settings":
-			{
-				"buffer_size": 0,
 				"line_ending": "Windows"
 			}
 		}
@@ -150,49 +99,21 @@
 	},
 	"expanded_folders":
 	[
-		"/D/git code share wxh/BC26 OpenCpu/BC26_OpenCPU_SDK_BETA0801",
-		"/D/git code share wxh/BC26 OpenCpu/BC26_OpenCPU_SDK_BETA0801/build",
-		"/D/git code share wxh/BC26 OpenCpu/BC26_OpenCPU_SDK_BETA0801/build/gcc",
-		"/D/git code share wxh/BC26 OpenCpu/BC26_OpenCPU_SDK_BETA0801/custom",
-		"/D/git code share wxh/BC26 OpenCpu/BC26_OpenCPU_SDK_BETA0801/custom/config",
-		"/D/git code share wxh/BC26 OpenCpu/BC26_OpenCPU_SDK_BETA0801/example",
-		"/D/git code share wxh/BC26 OpenCpu/BC26_OpenCPU_SDK_BETA0801/include",
-		"/D/git code share wxh/BC26 OpenCpu/BC26_OpenCPU_SDK_BETA0801/libs",
-		"/D/git code share wxh/BC26 OpenCpu/BC26_OpenCPU_SDK_BETA0801/libs/gcc",
-		"/D/git code share wxh/BC26 OpenCpu/BC26_OpenCPU_SDK_BETA0801/make",
-		"/D/git code share wxh/BC26 OpenCpu/BC26_OpenCPU_SDK_BETA0801/make/gcc",
-		"/D/git code share wxh/BC26 OpenCpu/BC26_OpenCPU_SDK_BETA0801/ril",
-		"/D/git code share wxh/BC26 OpenCpu/BC26_OpenCPU_SDK_BETA0801/ril/inc",
-		"/D/git code share wxh/BC26 OpenCpu/BC26_OpenCPU_SDK_BETA0801/ril/src",
-		"/D/git code share wxh/BC26 OpenCpu/BC26_OpenCPU_SDK_BETA0801/tools",
-		"/D/git code share wxh/BC26 OpenCpu/BC26_OpenCPU_SDK_BETA0801/tools/gcc"
+		"/D/Git code share/BC26-OpenCpu/BC26_OpenCPU_SDK_BETA0801"
 	],
 	"file_history":
 	[
-		"/D/git code share wxh/BC26 OpenCpu/BC26_OpenCPU_SDK_BETA0801/custom/config/custom_feature_def.h",
-		"/D/git code share wxh/BC26 OpenCpu/BC26_OpenCPU_SDK_BETA0801/ril/inc/ril.h",
-		"/D/git code share wxh/BC26 OpenCpu/BC26_OpenCPU_SDK_BETA0801/ril/inc/ril_onenet.h",
-		"/D/git code share wxh/BC26 OpenCpu/BC26_OpenCPU_SDK_BETA0801/custom/config/custom_task_cfg.h",
-		"/D/git code share wxh/BC26 OpenCpu/BC26_OpenCPU_SDK_BETA0801/ril/src/ril_socket.c",
-		"/D/git code share wxh/BC26 OpenCpu/BC26_OpenCPU_SDK_BETA0801/ril/src/ril_init.c",
-		"/D/git code share wxh/BC26 OpenCpu/BC26_OpenCPU_SDK_BETA0801/ril/src/ril_system.c",
-		"/D/git code share wxh/BC26 OpenCpu/BC26_OpenCPU_SDK_BETA0801/custom/config/sys_config.c",
-		"/D/git code share wxh/BC26 OpenCpu/BC26_OpenCPU_SDK_BETA0801/include/ql_eint.h",
-		"/D/git code share wxh/BC26 OpenCpu/BC26_OpenCPU_SDK_BETA0801/example/example_eint.c",
-		"/D/git code share wxh/BC26 OpenCpu/BC26_OpenCPU_SDK_BETA0801/include/ql_system.h",
-		"/D/git code share wxh/BC26 OpenCpu/BC26_OpenCPU_SDK_BETA0801/include/ql_power.h",
-		"/D/git code share wxh/BC26 OpenCpu/BC26_OpenCPU_SDK_BETA0801/include/ql_gpio.h",
-		"/D/git code share wxh/BC26 OpenCpu/BC26_OpenCPU_SDK_BETA0801/custom/main.c",
-		"/D/git code share wxh/BC26 OpenCpu/BC26_OpenCPU_SDK_BETA0801/build/gcc/build.log",
-		"/D/git code share wxh/BC26 OpenCpu/BC26_OpenCPU_SDK_BETA0801/example/example_lwm2m.c",
 		"/D/git code share wxh/BC26 OpenCpu/BC26_OpenCPU_SDK_BETA0801/ril/src/ril_lwm2m.c",
 		"/D/git code share wxh/BC26 OpenCpu/BC26_OpenCPU_SDK_BETA0801/ril/inc/ril_lwm2m.h",
 		"/D/git code share wxh/BC26 OpenCpu/BC26_OpenCPU_SDK_BETA0801/include/ql_type.h",
+		"/D/git code share wxh/BC26 OpenCpu/BC26_OpenCPU_SDK_BETA0801/include/ql_system.h",
+		"/D/git code share wxh/BC26 OpenCpu/BC26_OpenCPU_SDK_BETA0801/include/ql_power.h",
 		"/D/git code share wxh/BC26 OpenCpu/BC26_OpenCPU_SDK_BETA0801/example/example_onenet.c",
 		"/D/git code share wxh/BC26 OpenCpu/BC26_OpenCPU_SDK_BETA0801/example/example_time.c",
 		"/D/git code share wxh/BC26 OpenSDK开发包0801/BC26_OPENCPU版本包0801/BC26_OpenCPU_SDK_BETA0801/BC26_OpenCPU_SDK_BETA0801/example/example_lwm2m.c",
 		"/D/git code share wxh/BC26 OpenCpu/BC26_OpenCPU_SDK_BETA0801/make/gcc/gcc_makefile",
 		"/D/git code share wxh/BC26 OpenCpu/BC26_OpenCPU_SDK_BETA0801/example/example_multitask.c",
+		"/D/git code share wxh/BC26 OpenCpu/BC26_OpenCPU_SDK_BETA0801/example/example_lwm2m.c",
 		"/D/git code share wxh/BC26 OpenCpu/BC26_OpenCPU_NB1_SDK_V1.0_20180827/example/example_multitask.c",
 		"/D/git code share wxh/BC26 OpenCpu/BC26_OpenCPU_NB1_SDK_V1.0_20180827/build/gcc/APPGS3MDM32A01.map",
 		"/D/git code share wxh/BC26 OpenCpu/BC26_OpenCPU_NB1_SDK_V1.0_20180827/custom/config/custom_feature_def.h",
@@ -296,11 +217,24 @@
 		"/D/git code share wxh/DaBai LPuart1 DMA/DaBai LPuart1 DMA/Src/stm32l0xx_it.c",
 		"/D/git code share wxh/DaBai LPuart1 DMA/DaBai LPuart1 DMA/Src/stm32l0xx_hal_msp.c",
 		"/D/git code share wxh/BaBai_RTC_ADC_DMA/BaBai_RTC_ADC_DMA/Src/stm32l0xx_it.c",
-		"/D/git code share wxh/BaBai_RTC_ADC_DMA/BaBai_RTC_ADC_DMA/Src/stm32l0xx_hal_msp.c"
+		"/D/git code share wxh/BaBai_RTC_ADC_DMA/BaBai_RTC_ADC_DMA/Src/stm32l0xx_hal_msp.c",
+		"/D/git code share wxh/BaBai_RTC_ADC_DMA/BaBai_RTC_ADC_DMA/Src/main.c",
+		"/D/git code share wxh/DaBai LPuart1 DMA/DaBai LPuart1 DMA/Src/main.c",
+		"/D/git code share wxh/Hikey970 code/linux/lib/devres.c",
+		"/C/SPB_Data/.ssh/id_rsa.pub",
+		"/C/SPB_Data/.ssh/config",
+		"/D/git code share wxh/Dabai_IOT2/DabaiIOT/Src/main.c",
+		"/C/Keil_v5/ARM/PACK/Keil/STM32L0xx_DFP/2.0.0/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_adc.c",
+		"/C/Keil_v5/ARM/PACK/Keil/STM32L0xx_DFP/2.0.0/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c",
+		"/C/Keil_v5/ARM/PACK/Keil/STM32L0xx_DFP/2.0.0/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal.c",
+		"/D/git code share wxh/Dabai_IOT2/DabaiIOT/Src/usart.c",
+		"/D/git code share wxh/Dabai_IOT2/DabaiIOT/Src/rtc.c",
+		"/D/git code share wxh/Dabai_IOT2/DabaiIOT/Inc/main.h",
+		"/D/git code share wxh/Dabai_IOT2/DabaiIOT/Src/stm32l0xx_hal_msp.c"
 	],
 	"find":
 	{
-		"height": 40.0
+		"height": 27.0
 	},
 	"find_in_files":
 	{
@@ -314,34 +248,6 @@
 		"case_sensitive": false,
 		"find_history":
 		[
-			"OnURCHandler_SIM",
-			"URC_SIM_CARD_STATE_IND",
-			"MSG_ID_URC_INDICATION",
-			"MSG_ID_RIL_READY",
-			"__OCPU_RIL_SUPPORT__",
-			"MSG_ID_RIL_READY",
-			"Ql_OS_SendMessage",
-			"proc_reserved1",
-			"__OCPU_RIL_SUPPORT__",
-			"URC_ONENET_OBSERVE",
-			"STATE_ONENET_OBSERVER_RSP",
-			"URC_ONENET_DISCOVER",
-			"STATE_ONENET_DISCOVER_RSP",
-			"STATE_ONENET_UPDATE",
-			"m_myUartPort",
-			"MSG_ID_RIL_READY",
-			"__OCPU_RIL_SUPPORT__",
-			"Ql_OS_SendMessage",
-			"message",
-			"URC_LwM2M_RECV_DATA",
-			"URC_LwM2M_OBSERVE",
-			"STATE_TOTAL_NUM",
-			"NW_STAT_REGISTERED",
-			"m_InitCmds",
-			"NW_STAT_REGISTERED",
-			"STATE_NW_QUERY_STATE",
-			"m_onenet_state",
-			"MSG_ID_URC_INDICATION",
 			"EINT_LEVEL_TRIGGERED",
 			"lwm2m_access_mode",
 			"LWM2M_SEND_DATA_HEX",
@@ -364,7 +270,7 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -380,351 +286,243 @@
 						"selection":
 						[
 							[
-								1611,
-								1614
+								4965,
+								4965
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/C++/C.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 540.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 10,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "example/example_lwm2m.c",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 14368,
-						"regions":
-						{
-						},
-						"selection":
-						[
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.clone": -1,
+							"bracket_highlighter.clone_locations":
+							{
+								"close":
+								{
+									"1":
+									[
+										5299,
+										5300
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/curly_bracket.png",
+										"region.purplish"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										4911,
+										4912
+									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.clone_regions":
 							[
-								5378,
-								5395
-							]
-						],
-						"settings":
-						{
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content"
+							],
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+									"1":
+									[
+										4967,
+										4968
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/round_bracket.png",
+										"region.yellowish"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										4963,
+										4964
+									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content"
+							],
+							"incomplete_sync": null,
+							"is_init_dirty_state": false,
+							"origin_encoding": "UTF-8",
 							"syntax": "Packages/C++/C.sublime-syntax",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 2535.33333333,
+						"translation.y": 2558.4,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "ril/src/ril_urc.c",
+					"buffer": 1,
+					"file": "include/ql_gpio.h",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 19729,
+						"buffer_size": 8265,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								13722,
-								13738
+								4958,
+								4958
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/C++/C.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 6735.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "ril/src/ril_atResponse.c",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3686,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3381,
-								3381
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/C++/C.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 930.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "ril/src/ril_init.c",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2536,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2536,
-								2536
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/C++/C.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 645.333333333,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "ril/src/ril_lwm2m.c",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 13115,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								13115,
-								13115
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/C++/C.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 6690.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "ril/inc/ril.h",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 9854,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								5057,
-								5073
-							]
-						],
-						"settings":
-						{
+							"is_init_dirty_state": false,
+							"origin_encoding": "ASCII",
 							"syntax": "Packages/C++/C++.sublime-syntax",
-							"tab_size": 2,
+							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1379.0,
+						"translation.y": 1958.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 5,
 					"type": "text"
 				},
 				{
-					"buffer": 7,
-					"file": "example/example_onenet.c",
+					"buffer": 2,
+					"file": "example/example_eint.c",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 19592,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								4546,
-								4546
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/C++/C.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 2204.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 7,
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "example/example_multitask.c",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 27786,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								27052,
-								27064
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/C++/C.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 12255.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 9,
-					"file": "ril/src/ril_network.c",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 4592,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								4268,
-								4268
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/C++/C.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1918.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 11,
-					"type": "text"
-				},
-				{
-					"buffer": 10,
-					"file": "ril/src/ril_onenet.c",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 13953,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								7659,
-								7659
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/C++/C.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 3899.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 9,
-					"type": "text"
-				},
-				{
-					"buffer": 11,
-					"file": "make/gcc/gcc_makefile",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2958,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								966,
-								966
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 45.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 8,
-					"type": "text"
-				},
-				{
-					"buffer": 12,
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 0,
+						"buffer_size": 4995,
 						"regions":
 						{
 						},
@@ -737,13 +535,231 @@
 						],
 						"settings":
 						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.clone": -1,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+									"1":
+									[
+										5064,
+										5065
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/round_bracket.png",
+										"region.yellowish"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										5061,
+										5062
+									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content"
+							],
+							"incomplete_sync": null,
+							"is_init_dirty_state": false,
+							"origin_encoding": "UTF-8",
+							"syntax": "Packages/C++/C.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2228.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "build/gcc/build.log",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 21098,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"is_init_dirty_state": false,
+							"origin_encoding": "ASCII",
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 61.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "include/ql_eint.h",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 8833,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4792,
+								4792
+							]
+						],
+						"settings":
+						{
+							"is_init_dirty_state": false,
+							"origin_encoding": "ASCII",
+							"syntax": "Packages/C++/C++.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 1553.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "custom/main.c",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6623,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"is_init_dirty_state": false,
+							"origin_encoding": "ASCII",
+							"syntax": "Packages/C++/C.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 12,
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "make/gcc/gcc_makefile",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2958,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"is_init_dirty_state": false,
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 180.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
 					"type": "text"
 				}
 			]
@@ -751,7 +767,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 24.0
+		"height": 27.0
 	},
 	"input":
 	{
@@ -784,11 +800,15 @@
 	{
 		"height": 0.0
 	},
+	"output.sftp":
+	{
+		"height": 0.0
+	},
 	"pinned_build_system": "",
 	"project": "BC26_opencpu_sdk.sublime-project",
 	"replace":
 	{
-		"height": 44.0
+		"height": 50.0
 	},
 	"save_all_on_build": true,
 	"select_file":

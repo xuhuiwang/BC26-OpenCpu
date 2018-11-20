@@ -160,7 +160,7 @@ void proc_main_task(s32 taskId)
     while (TRUE)
     {
         //Ql_OS_GetMessage(&msg);
-        Ql_Sleep(500);
+        Ql_Sleep(100);
         GPIO_TogglePin(PINNAME_NETLIGHT);
         GPIO_TogglePin(PINNAME_GPIO1);
         APP_DEBUG("\r\n<--DaBai OpenCPU:  GPIO_Toggle loop -->\r\n");
