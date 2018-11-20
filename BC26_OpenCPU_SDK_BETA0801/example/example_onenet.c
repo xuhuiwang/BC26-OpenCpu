@@ -56,7 +56,7 @@
 
 #define DEBUG_ENABLE 1
 #if DEBUG_ENABLE > 0
-#define DEBUG_PORT  UART_PORT0
+#define DEBUG_PORT  UART_PORT2
 #define DBG_BUF_LEN   1024
 static char DBG_BUFFER[DBG_BUF_LEN];
 #define APP_DEBUG(FORMAT,...) {\
@@ -117,7 +117,7 @@ typedef struct{
 /*****************************************************************
 * buffer Param
 ******************************************************************/
-static Enum_SerialPort m_myUartPort  = UART_PORT0;
+static Enum_SerialPort m_myUartPort  = UART_PORT2;
 
 #define SRVADDR_BUFFER_LEN  100
 #define SEND_BUFFER_LEN     1024

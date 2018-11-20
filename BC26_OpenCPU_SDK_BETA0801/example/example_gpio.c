@@ -155,6 +155,7 @@ void proc_main_task(s32 taskId)
     // Start to program GPIO pin
     GPIO_Program();
 
+   //Ql_SleepDisable();
     // Start message loop of this task
     while (TRUE)
     {
@@ -163,7 +164,7 @@ void proc_main_task(s32 taskId)
         GPIO_TogglePin(PINNAME_NETLIGHT);
         GPIO_TogglePin(PINNAME_GPIO1);
         APP_DEBUG("\r\n<--DaBai OpenCPU:  GPIO_Toggle loop -->\r\n");
-        APP_DEBUG("SHT_T%f\r\n",tt);
+        //APP_DEBUG("SHT_T%f\r\n",tt);
         switch(msg.message)
         {
         case MSG_ID_USER_START:
