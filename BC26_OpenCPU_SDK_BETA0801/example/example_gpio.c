@@ -154,7 +154,7 @@ void proc_main_task(s32 taskId)
      APP_DEBUG("\r\n<-- DaBai OpenCPU: GPIO Example -->\r\n");
     // Start to program GPIO pin
     GPIO_Program();
-
+    Ql_SleepEnable();
    //Ql_SleepDisable();
     // Start message loop of this task
     while (TRUE)

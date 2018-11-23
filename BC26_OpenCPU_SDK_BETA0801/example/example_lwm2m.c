@@ -53,6 +53,9 @@
 #include "ril_system.h"
 
 
+//UART_PORT0 ->主串口
+//UART_PORT1 ->AUX串口
+//UART_PORT2 ->DEBUG串口
 
 #define DEBUG_ENABLE 1
 #if DEBUG_ENABLE > 0
@@ -123,7 +126,7 @@ ST_Lwm2m_Send_Param_t  lwm2m_send_param_t = {0,0,0,0,NULL,0};
 Lwm2m_Urc_Param_t*  lwm2m_urc_param_ptr = NULL;
 
 
-static u8 test_data[128] = "011111\0"; //send data
+static u8 test_data[128] = "01000200030004\0"; //send data
 u8 res_id[5] = "0\0";    // Resources id.
 
 
@@ -175,7 +178,7 @@ void proc_main_task(s32 taskId)
         {
 #ifdef __OCPU_RIL_SUPPORT__
         case MSG_ID_RIL_READY:
-            APP_DEBUG("<--DaBai RIL is ready -->\r\n");
+            APP_DEBUG("<-- RIL is ready -->\r\n");
             Ql_RIL_Initialize();
             break;
 #endif

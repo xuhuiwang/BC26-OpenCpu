@@ -750,7 +750,7 @@ text            0x0829206c     0x2cbc
  .rodata        0x08294d28        0xb build\gcc\obj/ril/src/ril_network.o
  .rodata        0x08294d33       0x16 libs/gcc/app_start.lib(ql_main.o)
  .rodata        0x08294d49       0x16 libs/gcc/app_start.lib(system.o)
-                0x08295abc                __data_load = LOADADDR (.data)
+                0x08295ab8                __data_load = LOADADDR (.data)
 
 .rodata.appEnableCfg
                 0x08294d60        0x4
@@ -785,7 +785,7 @@ text            0x0829206c     0x2cbc
                 0x08294d9c       0x50 build\gcc\obj/custom/config/sys_config.o
                 0x08294d9c                TaskConfig
 
-.rodata.str1.1  0x08294dec      0xa9e
+.rodata.str1.1  0x08294dec      0xa99
  .rodata.str1.1
                 0x08294dec       0x25 build\gcc\obj/ril/src/ril_atResponse.o
                                  0x2e (size before relaxing)
@@ -807,38 +807,38 @@ text            0x0829206c     0x2cbc
                 0x08295145       0x11 build\gcc\obj/ril/src/ril_util.o
                                  0x16 (size before relaxing)
  .rodata.str1.1
-                0x08295156      0x427 build\gcc\obj/example/example_lwm2m.o
+                0x08295156      0x422 build\gcc\obj/example/example_lwm2m.o
  .rodata.str1.1
-                0x0829557d       0x19 libs/gcc/app_start.lib(memory.o)
+                0x08295578       0x19 libs/gcc/app_start.lib(memory.o)
  .rodata.str1.1
-                0x08295596       0x1a libs/gcc/app_start.lib(ql_main.o)
+                0x08295591       0x1a libs/gcc/app_start.lib(ql_main.o)
                                  0x1f (size before relaxing)
  .rodata.str1.1
-                0x082955b0        0x7 libs/gcc/app_start.lib(ril_main.o)
+                0x082955ab        0x7 libs/gcc/app_start.lib(ril_main.o)
                                   0xe (size before relaxing)
  .rodata.str1.1
-                0x082955b7       0xa1 libs/gcc/app_start.lib(stdlib_func.o)
+                0x082955b2       0xa1 libs/gcc/app_start.lib(stdlib_func.o)
  .rodata.str1.1
-                0x08295658      0x197 libs/gcc/app_start.lib(taskMngt.o)
+                0x08295653      0x197 libs/gcc/app_start.lib(taskMngt.o)
  .rodata.str1.1
-                0x082957ef       0x45 libs/gcc/app_start.lib(timer.o)
+                0x082957ea       0x45 libs/gcc/app_start.lib(timer.o)
  .rodata.str1.1
-                0x08295834       0x56 libs/gcc/app_start.lib(uart.o)
+                0x0829582f       0x56 libs/gcc/app_start.lib(uart.o)
 
 .rodata.m_AtURCHdlEntry
-                0x0829588c      0x188
+                0x08295888      0x188
  .rodata.m_AtURCHdlEntry
-                0x0829588c      0x188 build\gcc\obj/ril/src/ril_urc.o
+                0x08295888      0x188 build\gcc\obj/ril/src/ril_urc.o
 
 .rodata.m_SysURCHdlEntry
-                0x08295a14       0xa8
+                0x08295a10       0xa8
  .rodata.m_SysURCHdlEntry
-                0x08295a14       0xa8 build\gcc\obj/ril/src/ril_urc.o
+                0x08295a10       0xa8 build\gcc\obj/ril/src/ril_urc.o
 
-.rel.dyn        0x08295abc        0x0
+.rel.dyn        0x08295ab8        0x0
  .rel.iplt      0x00000000        0x0 build\gcc\obj/custom/config/custom_sys_cfg.o
 
-.data           0x001e7000      0x124 load address 0x08295abc
+.data           0x001e7000      0x124 load address 0x08295ab8
                 0x001e7000                __data_start = .
                 0x001e7000                . = ALIGN (0x4)
  *(.data.*)
@@ -871,10 +871,10 @@ text            0x0829206c     0x2cbc
  *(.data)
                 0x001e7124                _edata = .
 
-.igot.plt       0x001e7124        0x0 load address 0x08295be0
+.igot.plt       0x001e7124        0x0 load address 0x08295bdc
  .igot.plt      0x00000000        0x0 build\gcc\obj/custom/config/custom_sys_cfg.o
 
-.bss            0x001e7124     0x2748 load address 0x08295be0
+.bss            0x001e7124     0x2748 load address 0x08295bdc
                 0x001e7124                __bss_start__ = .
                 0x001e7124                . = ALIGN (0x4)
  *(.bss)
