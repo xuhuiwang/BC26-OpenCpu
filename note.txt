@@ -1,0 +1,6 @@
+对比BC26_OpenCPU_SDK_BETA0718版本，主要更新如下：
+1.解决浮点运算dump问题
+2.解决ADC采样200mv误差问题
+3.增加NVRAM接口（Ql_SecureData_Store/Ql_SecureData_Read），提供100字节的空间保存掉电不丢失数据
+4.增加接口（Ql_GetPowerOnReason）对模块从不同场景poweron判断，方便用户处理业务。
+5.增加lwm2m和onenet用例

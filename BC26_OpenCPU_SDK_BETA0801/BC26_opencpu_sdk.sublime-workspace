@@ -1,0 +1,659 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "example/example_gpio.c",
+			"settings":
+			{
+				"buffer_size": 5351,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "example/example_lwm2m.c",
+			"settings":
+			{
+				"buffer_size": 14434,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "ril/src/ril_lwm2m.c",
+			"settings":
+			{
+				"buffer_size": 13115,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "custom/config/custom_feature_def.h",
+			"settings":
+			{
+				"buffer_size": 305,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "example/example_onenet.c",
+			"settings":
+			{
+				"buffer_size": 19592,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "ril/src/ril_urc.c",
+			"settings":
+			{
+				"buffer_size": 19729,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "make/gcc/gcc_makefile",
+			"settings":
+			{
+<<<<<<< HEAD:BC26NB_OpenCPU_SDK_BETA0704/bc26SDK20180720.sublime-workspace
+				"buffer_size": 5582,
+=======
+				"buffer_size": 2958,
+				"encoding": "UTF-8",
+>>>>>>> dev:BC26_OpenCPU_SDK_BETA0801/BC26_opencpu_sdk.sublime-workspace
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/D/git code share wxh/BC26 OpenCpu/BC26_OpenCPU_SDK_BETA0801",
+		"/D/git code share wxh/BC26 OpenCpu/BC26_OpenCPU_SDK_BETA0801/build",
+		"/D/git code share wxh/BC26 OpenCpu/BC26_OpenCPU_SDK_BETA0801/build/gcc",
+		"/D/git code share wxh/BC26 OpenCpu/BC26_OpenCPU_SDK_BETA0801/custom",
+		"/D/git code share wxh/BC26 OpenCpu/BC26_OpenCPU_SDK_BETA0801/custom/config",
+		"/D/git code share wxh/BC26 OpenCpu/BC26_OpenCPU_SDK_BETA0801/example",
+		"/D/git code share wxh/BC26 OpenCpu/BC26_OpenCPU_SDK_BETA0801/libs",
+		"/D/git code share wxh/BC26 OpenCpu/BC26_OpenCPU_SDK_BETA0801/libs/gcc",
+		"/D/git code share wxh/BC26 OpenCpu/BC26_OpenCPU_SDK_BETA0801/make",
+		"/D/git code share wxh/BC26 OpenCpu/BC26_OpenCPU_SDK_BETA0801/make/gcc",
+		"/D/git code share wxh/BC26 OpenCpu/BC26_OpenCPU_SDK_BETA0801/ril",
+		"/D/git code share wxh/BC26 OpenCpu/BC26_OpenCPU_SDK_BETA0801/ril/inc",
+		"/D/git code share wxh/BC26 OpenCpu/BC26_OpenCPU_SDK_BETA0801/ril/src",
+		"/D/git code share wxh/BC26 OpenCpu/BC26_OpenCPU_SDK_BETA0801/tools",
+		"/D/git code share wxh/BC26 OpenCpu/BC26_OpenCPU_SDK_BETA0801/tools/gcc"
+	],
+	"file_history":
+	[
+		"/D/git code share wxh/BC26 OpenCpu/BC26_OpenCPU_SDK_BETA0801/include/ql_power.h",
+		"/D/git code share wxh/BC26 OpenCpu/BC26_OpenCPU_SDK_BETA0801/ril/inc/ril.h",
+		"/D/git code share wxh/BC26 OpenCpu/BC26_OpenCPU_SDK_BETA0801/ril/src/ril_system.c",
+		"/D/git code share wxh/BC26 OpenCpu/BC26_OpenCPU_SDK_BETA0801/ril/src/ril_onenet.c",
+		"/D/git code share wxh/BC26 OpenCpu/BC26_OpenCPU_SDK_BETA0801/example/example_onenet.c",
+		"/D/git code share wxh/BC26 OpenCpu/BC26_OpenCPU_SDK_BETA0801/ril/src/ril_network.c",
+		"/D/git code share wxh/BC26 OpenCpu/BC26_OpenCPU_SDK_BETA0801/ril/src/ril_lwm2m.c",
+		"/D/git code share wxh/BC26 OpenCpu/BC26_OpenCPU_SDK_BETA0801/ril/src/ril_urc.c",
+		"/D/git code share wxh/BC26 OpenCpu/BC26_OpenCPU_SDK_BETA0801/ril/src/ril_init.c",
+		"/D/git code share wxh/BC26 OpenCpu/BC26_OpenCPU_SDK_BETA0801/example/example_multitask.c",
+		"/D/git code share wxh/BC26 OpenCpu/BC26_OpenCPU_SDK_BETA0801/make/gcc/gcc_makefile",
+		"/D/git code share wxh/BC26 OpenCpu/BC26_OpenCPU_SDK_BETA0801/ril/src/ril_atResponse.c",
+		"/D/git code share wxh/BC26 OpenCpu/BC26_OpenCPU_SDK_BETA0801/include/ql_stdlib.h",
+		"/D/git code share wxh/BC26 OpenCpu/BC26_OpenCPU_SDK_BETA0801/custom/config/custom_feature_def.h",
+		"/D/git code share wxh/BC26 OpenCpu/BC26_OpenCPU_SDK_BETA0801/ril/inc/ril_onenet.h",
+		"/D/git code share wxh/BC26 OpenCpu/BC26_OpenCPU_SDK_BETA0801/custom/config/custom_task_cfg.h",
+		"/D/git code share wxh/BC26 OpenCpu/BC26_OpenCPU_SDK_BETA0801/ril/src/ril_socket.c",
+		"/D/git code share wxh/BC26 OpenCpu/BC26_OpenCPU_SDK_BETA0801/custom/config/sys_config.c",
+		"/D/git code share wxh/BC26 OpenCpu/BC26_OpenCPU_SDK_BETA0801/include/ql_eint.h",
+		"/D/git code share wxh/BC26 OpenCpu/BC26_OpenCPU_SDK_BETA0801/example/example_eint.c",
+		"/D/git code share wxh/BC26 OpenCpu/BC26_OpenCPU_SDK_BETA0801/include/ql_system.h",
+		"/D/git code share wxh/BC26 OpenCpu/BC26_OpenCPU_SDK_BETA0801/include/ql_gpio.h",
+		"/D/git code share wxh/BC26 OpenCpu/BC26_OpenCPU_SDK_BETA0801/custom/main.c",
+		"/D/git code share wxh/BC26 OpenCpu/BC26_OpenCPU_SDK_BETA0801/build/gcc/build.log",
+		"/D/git code share wxh/BC26 OpenCpu/BC26_OpenCPU_SDK_BETA0801/example/example_lwm2m.c",
+		"/D/git code share wxh/BC26 OpenCpu/BC26_OpenCPU_SDK_BETA0801/ril/inc/ril_lwm2m.h",
+		"/D/git code share wxh/BC26 OpenCpu/BC26_OpenCPU_SDK_BETA0801/include/ql_type.h",
+		"/D/git code share wxh/BC26 OpenCpu/BC26_OpenCPU_SDK_BETA0801/example/example_time.c",
+		"/D/git code share wxh/BC26 OpenSDK开发包0801/BC26_OPENCPU版本包0801/BC26_OpenCPU_SDK_BETA0801/BC26_OpenCPU_SDK_BETA0801/example/example_lwm2m.c",
+		"/D/git code share wxh/BC26 OpenCpu/BC26_OpenCPU_NB1_SDK_V1.0_20180827/example/example_multitask.c",
+		"/D/git code share wxh/BC26 OpenCpu/BC26_OpenCPU_NB1_SDK_V1.0_20180827/build/gcc/APPGS3MDM32A01.map",
+		"/D/git code share wxh/BC26 OpenCpu/BC26_OpenCPU_NB1_SDK_V1.0_20180827/custom/config/custom_feature_def.h",
+		"/D/git code share wxh/BC26_OpenCPU_NB1_SDK_V1.0_20180916/BC26_OpenCPU_NB1_SDK_V1.0/BC26_OPCPU_SDK",
+		"/C/Users/WangXuhui/qwj/hardwareUpdateInfo.log",
+		"/C/Users/WangXuhui/hardwareUpdateInfo.log",
+		"/E/ninebot/robot_project/robot Ver1/loomo生产/平板测试/主板box/主板box/LOG/54AGE17JJ71955 - VA50T180300204/apr/54AGE17JJ71955/main.log",
+		"/D/git code share wxh/BC26 OpenCpu/BC26NB_OpenCPU_SDK_BETA0704/build/gcc/build.log",
+		"/D/git code share wxh/BC26 OpenCpu/BC26NB_OpenCPU_SDK_BETA0704/custom/config/custom_task_cfg.h",
+		"/D/git code share wxh/BC26 OpenCpu/BC26NB_OpenCPU_SDK_BETA0704/include/ql_system.h",
+		"/D/git code share wxh/BC26 OpenCpu/BC26NB_OpenCPU_SDK_BETA0704/example/example_multitask.c",
+		"/D/git code share wxh/BC26 OpenCpu/BC26NB_OpenCPU_SDK_BETA0704/make/gcc/gcc_makefile",
+		"/D/git code share wxh/BC26 OpenCpu/BC26NB_OpenCPU_SDK_BETA0704/bc26SDK20180720.sublime-project",
+		"/D/git code share wxh/BC26 OpenCpu/BC26NB_OpenCPU_SDK_BETA0704/example/example_gpio.c",
+		"/D/git code share wxh/BC26 OpenCpu/BC26NB_OpenCPU_SDK_BETA0704/custom/config/custom_gpio_cfg.h",
+		"/F/chtt63eacc03",
+		"/D/git code share wxh/BC26 OpenCpu/BC26NB_OpenCPU_SDK_BETA0704/sdk_lib/src/stdlib_func.c",
+		"/D/git code share wxh/BC26 OpenCpu/BC26NB_OpenCPU_SDK_BETA0704/include/ql_pwm.h",
+		"/D/git code share wxh/BC26 OpenCpu/BC26NB_OpenCPU_SDK_BETA0704/sdk_lib/src/pwm.c",
+		"/D/git code share wxh/BC26 OpenCpu/BC26NB_OpenCPU_SDK_BETA0704/example/example_pwm.c",
+		"/D/git code share wxh/BC26 OpenCpu/SDK_n_LIB_2_customer/BC26OPCPU SublimePrj.sublime-project",
+		"/C/Users/WangXuhui/Desktop/NB_IOT/BC26 core/SDK_n_LIB_2_customer_ninebot/example/example_multitask.c",
+		"/C/Users/WangXuhui/Desktop/NB_IOT/BC26 core/SDK_n_LIB_2_customer_ninebot/example/example_gpio.c",
+		"/C/Users/WangXuhui/Desktop/NB_IOT/BC26 core/版本包0703/版本包0703/BC26_OpenCPU_SDK_BETA0703/BC26_OpenCPU_SDK_BETA0703/example/example_spi.c",
+		"/D/git code share wxh/BC26 OpenCpu/SDK_n_LIB_2_customer/custom/config/custom_task_cfg.h",
+		"/C/Users/WangXuhui/Desktop/NB_IOT/BC26 core/版本包0703/版本包0703/BC26_OpenCPU_SDK_BETA0703/BC26_OpenCPU_SDK_BETA0703/make/gcc/gcc_makefile",
+		"/D/git code share wxh/BC26 OpenCpu/SDK_n_LIB_2_customer/build/gcc/build.log",
+		"/D/git code share wxh/BC26 OpenCpu/SDK_n_LIB_2_customer/example/example_multitask.c",
+		"/D/git code share wxh/BC26 OpenCpu/SDK_n_LIB_2_customer/example/example_gpio.c",
+		"/D/git code share wxh/BC26 OpenCpu/SDK_n_LIB_2_customer/make/gcc/gcc_makefile",
+		"/D/git code share wxh/BC26 OpenCpu/SDK_n_LIB_2_customer/example/example_spi.c",
+		"/D/git code share wxh/BC26 OpenCpu/SDK_n_LIB_2_customer/include/ql_spi.h",
+		"/C/Users/WangXuhui/Desktop/NB_IOT/BC26 core/版本包0703/版本包0703/BC26_OpenCPU_SDK_BETA0703/BC26_OpenCPU_SDK_BETA0703/example/example_udpclient.c",
+		"/C/Users/WangXuhui/Desktop/NB_IOT/BC26 core/版本包0703/版本包0703/BC26_OpenCPU_SDK_BETA0703/BC26_OpenCPU_SDK_BETA0703/example/example_time.c",
+		"/D/git code share wxh/BC26 OpenCpu/SDK_n_LIB_2_customer/example/example_system.c",
+		"/C/Users/WangXuhui/Desktop/NB_IOT/BC26 core/版本包0703/版本包0703/BC26_OpenCPU_SDK_BETA0703/BC26_OpenCPU_SDK_BETA0703/example/example_system.c",
+		"/D/git code share wxh/BC26 OpenCpu/SDK_n_LIB_2_customer/example/example_tcpclient.c",
+		"/D/git code share wxh/BC26 OpenCpu/SDK_n_LIB_2_customer/build/gcc/app_image_bin.cfg",
+		"/D/git code share wxh/BC26 OpenCpu/SDK_n_LIB_2_customer/build/gcc/APPGS3MDM32A01.map",
+		"/D/git code share wxh/BC26 OpenCpu/SDK_n_LIB_2_customer/include/ql_system.h",
+		"/D/git code share wxh/BC26 OpenCpu/SDK_n_LIB_2_customer/example/example_pwm.c",
+		"/D/git code share wxh/BC26 OpenCpu/SDK_n_LIB_2_customer/example/example_eint.c",
+		"/C/Users/WangXuhui/Desktop/NB_IOT/BC26 core/版本包0703/版本包0703/BC26_OpenCPU_SDK_BETA0703/BC26_OpenCPU_SDK_BETA0703/example/example_gpio.c",
+		"/C/Users/WangXuhui/Desktop/NB_IOT/BC26 core/版本包0703/版本包0703/BC26_OpenCPU_SDK_BETA0703/BC26_OpenCPU_SDK_BETA0703/example/example_multitask.c",
+		"/C/Users/WangXuhui/Documents/Tencent Files/1161863463/FileRecv/gcc_makefile",
+		"/D/git code share wxh/BC26 OpenCpu/SDK_n_LIB_2_customer/example/example_iic.c",
+		"/D/git code share wxh/BC26 OpenCpu/SDK_n_LIB_2_customer/example/example_udpclient.c",
+		"/D/git code share wxh/BC26 OpenCpu/SDK_n_LIB_2_customer/include/ql_gpio.h",
+		"/D/git code share wxh/BC26 OpenCpu/SDK_n_LIB_2_customer/custom/main.c",
+		"/D/git code share wxh/BC26 OpenCpu/SDK_n_LIB_2_customer/include/ql_common.h",
+		"/D/git code share wxh/BC26 OpenCpu/SDK_n_LIB_2_customer/custom/config/sys_config.c",
+		"/D/git code share wxh/BC26 OpenCpu/SDK_n_LIB_2_customer/custom/config/custom_sys_cfg.c",
+		"/D/git code share wxh/BC26 OpenCpu SDK_V0.1/BC26 OpenCpu/SDK_n_LIB_2_customer/custom/config/sys_config.c",
+		"/F/headTestLog/headlogsA/headlogs/54AGE17JJ71942/headtestpass.log.bak20120101001418131",
+		"/F/headTestLog/headlogsA/headlogs/54AGE17JJ71942/headtestpass.log.bak20120101011102299",
+		"/F/headTestLog/headlogsA/headlogs/54AGE17JJ71942/headtestpass.log.bak20120101001517148",
+		"/F/headTestLog/headlogsB/headlogs/54AGE18E380046/headtestpass.log.bak20120101000416934",
+		"/F/headTestLog/headlogsB/headlogs/54AGE18E380046/headtestpass.log.bak20120101000316414",
+		"/F/headTestLog/headlogs A/54AGE17JJ71838/headtest_2012-01-01-02:31",
+		"/F/headTestLog/headlogs A/54AGE18E380036/headtest_2012-01-01-20:05",
+		"/F/headTestLog/headlogs/54AGE18E380142/headtest_2012-01-01-00:07",
+		"/D/git code share wxh/BC26 OpenCpu/SDK_n_LIB_2_customer/include/ql_uart.h",
+		"/C/Users/WangXuhui/Documents/GitHub/DaBaiNB-IOT_stm32L051/DaBai_Src/main.c",
+		"/D/BC26 OpenCpu/SDK_n_LIB_2_customer/example/example_gpio.c",
+		"/D/BC26 OpenCpu/SDK_n_LIB_2_customer/include/ql_uart.h",
+		"/D/BC26 OpenCpu/SDK_n_LIB_2_customer/custom/main.c",
+		"/D/BC26 OpenCpu/SDK_n_LIB_2_customer/example/example_time.c",
+		"/D/BC26 OpenCpu/SDK_n_LIB_2_customer/make/gcc/gcc_makefile",
+		"/D/BC26 OpenCpu/SDK_n_LIB_2_customer/example/example_adc.c",
+		"/D/BC26 OpenCpu/SDK_n_LIB_2_customer/example/example_timer.c",
+		"/D/BC26 OpenCpu/SDK_n_LIB_2_customer/include/ql_system.h",
+		"/D/BC26 OpenCpu/SDK_n_LIB_2_customer/build/gcc/build.log",
+		"/D/BC26 OpenCpu/SDK_n_LIB_2_customer/libs/app_image_bin.cfg",
+		"/D/BC26 OpenCpu/SDK_n_LIB_2_customer/make/gcc/gcc_make.bat",
+		"/D/BC26 OpenCpu/SDK_n_LIB_2_customer/make/gcc/gcc_makefiledef",
+		"/D/BC26 OpenCpu/SDK_n_LIB_2_customer/custom/config/custom_feature_def.h",
+		"/D/BC26 OpenCpu/SDK_n_LIB_2_customer/custom/config/custom_gpio_cfg.h",
+		"/D/BC26 OpenCpu/SDK_n_LIB_2_customer/include/ql_type.h",
+		"/D/BC26 OpenCpu/SDK_n_LIB_2_customer/example/example_iic.c",
+		"/D/BC26 OpenCpu/SDK_n_LIB_2_customer/example/example_pwm.c",
+		"/D/BC26 OpenCpu/SDK_n_LIB_2_customer/example/example_memory.c",
+		"/D/BC26 OpenCpu/SDK_n_LIB_2_customer/example/example_multitask.c",
+		"/D/BC26 OpenCpu/SDK_n_LIB_2_customer/example/example_eint.c",
+		"/D/BC26 OpenCpu/SDK_n_LIB_2_customer/example/example_float_math.c",
+		"/D/BC26 OpenCpu/SDK_n_LIB_2_customer/include/ql_gpio.h",
+		"/D/BC26 OpenCpu/SDK_n_LIB_2_customer/custom/config/custom_sys_cfg.c",
+		"/D/BC26 OpenCpu/SDK_n_LIB_2_customer/custom/config/custom_task_cfg.h",
+		"/D/BC26 OpenCpu/SDK_n_LIB_2_customer/custom/config/sys_config.c",
+		"/D/BC26 OpenCpu/SDK_n_LIB_2_customer/include/ql_common.h",
+		"/D/BC26 OpenCpu/SDK_n_LIB_2_customer/build/gcc/app_image_bin.cfg",
+		"/D/BC26 OpenCpu/SDK_n_LIB_2_customer/docs/Quectel_BC26-TE-B_用户指导_V1.0_Preliminary_20180103.pdf",
+		"/D/BC26 OpenCpu/SDK_n_LIB_2_customer/example/utility.c",
+		"/E/ninebot/MINI2 Producibility/协控版/mini2_UpperController量产程序20180607/mini2_UpperController/Src/AppLayer/ChassisControl.c",
+		"/D/百度云同步盘/创业项目/窄带物联网/New_module/BC26/BC26_OpenCpu/OpenSDK & Doc/BC26 OPENCPU开发包/SDK_n_LIB_2_customer/custom/config/custom_sys_cfg.c",
+		"/D/百度云同步盘/创业项目/窄带物联网/New_module/BC26/BC26_OpenCpu/OpenSDK & Doc/BC26 OPENCPU开发包/SDK_n_LIB_2_customer/example/example_gpio.c",
+		"/D/百度云同步盘/创业项目/窄带物联网/New_module/BC26/BC26_OpenCpu/OpenSDK & Doc/BC26 OPENCPU开发包/SDK_n_LIB_2_customer/custom/main.c",
+		"/D/百度云同步盘/创业项目/窄带物联网/New_module/BC26/BC26_OpenCpu/OpenSDK & Doc/BC26 OPENCPU开发包/SDK_n_LIB_2_customer/make/gcc/gcc_makefile",
+		"/D/git code share wxh/DaBai LPuart1 DMA/DaBai LPuart1 DMA/Inc/stm32l0xx_it.h",
+		"/D/git code share wxh/DaBai LPuart1 DMA/DaBai LPuart1 DMA/Inc/stm32l0xx_hal_conf.h"
+	],
+	"find":
+	{
+		"height": 40.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"STATE_LwM2M_SEND",
+			"URC_LwM2M_OBSERVE",
+			"STATE_NW_QUERY_STATE",
+			"m_lwm2m_state",
+			"m_SrvADDR",
+			"Network",
+			"URC_SIM_CARD_STATE_IND",
+			"OnURCHandler_Network",
+			"OnURCHandler_SIM",
+			"URC_SIM_CARD_STATE_IND",
+			"MSG_ID_URC_INDICATION",
+			"onnet_param_t",
+			"m_send_buf",
+			"test_data",
+			"SEND_BUFFER_LEN",
+			"m_send_buf",
+			"m_SrvADDR",
+			"AtURCHdlEntry",
+			"atRsp_callback",
+			"Default_atRsp_callback",
+			"Ql_RIL_Initialize",
+			"MSG_ID_URC_INDICATION",
+			"msg_id",
+			"OnURCHandler_Network",
+			"MSG_ID_URC_INDICATION",
+			"OnURCHandler_Network",
+			"OnURCHandler_SIM",
+			"OnURCHandler_ONENET_EVENT",
+			"MSG_ID_URC_INDICATION",
+			"CMEE",
+			"MSG_ID_RIL_READY",
+			"URC_LwM2M_OBSERVE",
+			"URC_LwM2M_RECV_DATA",
+			"MSG_ID_RIL_READY",
+			"MSG_ID_URC_INDICATION",
+			"OnURCHandler_SIM",
+			"URC_SIM_CARD_STATE_IND",
+			"MSG_ID_URC_INDICATION",
+			"MSG_ID_RIL_READY",
+			"__OCPU_RIL_SUPPORT__",
+			"MSG_ID_RIL_READY",
+			"Ql_OS_SendMessage",
+			"proc_reserved1",
+			"__OCPU_RIL_SUPPORT__",
+			"URC_ONENET_OBSERVE",
+			"STATE_ONENET_OBSERVER_RSP",
+			"URC_ONENET_DISCOVER",
+			"STATE_ONENET_DISCOVER_RSP",
+			"STATE_ONENET_UPDATE",
+			"m_myUartPort",
+			"MSG_ID_RIL_READY",
+			"__OCPU_RIL_SUPPORT__",
+			"Ql_OS_SendMessage",
+			"message",
+			"URC_LwM2M_RECV_DATA",
+			"URC_LwM2M_OBSERVE",
+			"STATE_TOTAL_NUM",
+			"NW_STAT_REGISTERED",
+			"m_InitCmds",
+			"NW_STAT_REGISTERED",
+			"STATE_NW_QUERY_STATE",
+			"m_onenet_state",
+			"MSG_ID_URC_INDICATION",
+			"EINT_LEVEL_TRIGGERED",
+			"lwm2m_access_mode",
+			"LWM2M_SEND_DATA_HEX",
+			"lwm2m_send_param_t",
+			"lwm2m_access_mode"
+		],
+		"highlight": false,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": false
+	},
+	"groups":
+	[
+		{
+<<<<<<< HEAD:BC26NB_OpenCPU_SDK_BETA0704/bc26SDK20180720.sublime-workspace
+			"selected": 1,
+=======
+			"selected": 6,
+>>>>>>> dev:BC26_OpenCPU_SDK_BETA0801/BC26_opencpu_sdk.sublime-workspace
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "example/example_gpio.c",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5351,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1446,
+								1462
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 542.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "example/example_lwm2m.c",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 14434,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								12408,
+								12417
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+<<<<<<< HEAD:BC26NB_OpenCPU_SDK_BETA0704/bc26SDK20180720.sublime-workspace
+						"translation.y": 1564.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+=======
+						"translation.y": 260.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+>>>>>>> dev:BC26_OpenCPU_SDK_BETA0801/BC26_opencpu_sdk.sublime-workspace
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "ril/src/ril_lwm2m.c",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 13115,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								10692,
+								10698
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 5773.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "custom/config/custom_feature_def.h",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 305,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								247,
+								247
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "example/example_onenet.c",
+					"semi_transient": false,
+					"settings":
+					{
+<<<<<<< HEAD:BC26NB_OpenCPU_SDK_BETA0704/bc26SDK20180720.sublime-workspace
+						"buffer_size": 5582,
+=======
+						"buffer_size": 19592,
+>>>>>>> dev:BC26_OpenCPU_SDK_BETA0801/BC26_opencpu_sdk.sublime-workspace
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 810.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "ril/src/ril_urc.c",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 19729,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								8140,
+								8166
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 3448.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "make/gcc/gcc_makefile",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2958,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								996,
+								996
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 90.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 24.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "BC26_opencpu_sdk.sublime-project",
+	"replace":
+	{
+		"height": 44.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 293.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
