@@ -112,7 +112,8 @@ static Enum_SerialPort m_myUartPort  = UART_PORT0;
 #define SRVADDR_BUFFER_LEN  100
 #define SEND_BUFFER_LEN     1024
 #define RECV_BUFFER_LEN     1024
-
+#define READ_BUFFER_LENGTH 1024
+static u8 m_Read_Buffer[READ_BUFFER_LENGTH];
 static u8 m_send_buf[SEND_BUFFER_LEN]={0};
 static u8 m_recv_buf[RECV_BUFFER_LEN]={0};
 static u8  m_SrvADDR[SRVADDR_BUFFER_LEN] = "180.101.147.115\0";
@@ -141,7 +142,7 @@ s32 recv_remain_length = 0;
 * uart callback function
 ******************************************************************/
 static void CallBack_UART_Hdlr(Enum_SerialPort port, Enum_UARTEventType msg, bool level, void* customizedPara);
-
+static void CallBack_UART0_Hdlr(Enum_SerialPort port, Enum_UARTEventType msg, bool level, void* customizedPara);
 /*****************************************************************
 * timer callback function
 ******************************************************************/
@@ -160,7 +161,7 @@ void proc_main_task(s32 taskId)
 
 
     // Register & open UART port
-    Ql_UART_Register(m_myUartPort, CallBack_UART_Hdlr, NULL);
+    Ql_UART_Register(m_myUartPort, CallBack_UART0_Hdlr, NULL);
     Ql_UART_Open(m_myUartPort, 115200, FC_NONE);
 
 	Ql_UART_Register(UART_PORT2, CallBack_UART_Hdlr, NULL);
@@ -256,6 +257,41 @@ static void CallBack_UART_Hdlr(Enum_SerialPort port, Enum_UARTEventType msg, boo
         break;
     }
 }
+
+
+static void CallBack_UART0_Hdlr(Enum_SerialPort port, Enum_UARTEventType msg, bool level, void* customizedPara)
+{
+    u32 rdLen=0;
+    s32 ret;
+     char *p = NULL;
+    switch (msg)
+    {
+    case EVENT_UART_READY_TO_READ:
+        {
+            APP_DEBUG("\r\n<--OpenCPU: EVENT_UART_READY_TO_READ-->\r\n");  
+            Ql_memset(m_Read_Buffer, 0x0, sizeof(m_Read_Buffer));
+            rdLen = Ql_UART_Read(port, m_Read_Buffer, sizeof(m_Read_Buffer));
+
+            //command: Init PWM=<pwmPinName>,<pwmSrcClk>,<pwmDiv>,<lowPulseNum>,<highPulseNum>
+            p = Ql_strstr(m_Read_Buffer,"DaBai DTU SEND DATA=");
+            if(p)
+            {
+
+                APP_DEBUG("<--CallBack_UART0_Hdlr-->\r\n");
+                m_lwm2m_state = STATE_LwM2M_SEND;
+                Ql_Timer_Start(LwM2M_TIMER_ID, LwM2M_TIMER_PERIOD, TRUE);
+            }
+           break;
+        }
+    case EVENT_UART_READY_TO_WRITE:
+        //APP_DEBUG("\r\n<--OpenCPU: EVENT_UART_READY_TO_WRITE-->\r\n");  
+        break;
+    default:
+        APP_DEBUG("\r\n<--OpenCPU: default->\r\n");  
+        break;
+    }
+}
+
 
 static void Callback_Timer(u32 timerId, void* param)
 {

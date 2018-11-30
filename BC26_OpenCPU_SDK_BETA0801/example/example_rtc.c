@@ -54,7 +54,7 @@
 
 #define DEBUG_ENABLE 1
 #if DEBUG_ENABLE > 0
-#define DEBUG_PORT  UART_PORT0
+#define DEBUG_PORT  UART_PORT2
 #define DBG_BUF_LEN   512
 static char DBG_BUFFER[DBG_BUF_LEN];
 #define APP_DEBUG(FORMAT,...) {\
@@ -72,11 +72,11 @@ static char DBG_BUFFER[DBG_BUF_LEN];
 #endif
 
 
-static Enum_SerialPort m_myUartPort  = UART_PORT0;
+static Enum_SerialPort m_myUartPort  = DEBUG_PORT;
 
 
 static u32 Rtc_id = 0x101; 
-static u32 Rtc_Interval = 60*10*100;
+static u32 Rtc_Interval = 10*10*100;
 static s32 m_param = 0;
 
 static void Rtc_handler(u32 rtcId, void* param);
@@ -120,7 +120,7 @@ void proc_main_task(s32 taskId)
         APP_DEBUG("\r\n<--failed!! Ql_Rtc_Start ret=%d-->\r\n",ret);        
     }
     APP_DEBUG("\r\n<--Ql_Rtc_Start(ID=%d,Interval=%d,) ret=%d-->\r\n",Rtc_id,Rtc_Interval,ret);
-
+    Ql_SleepDisable();
     while (1)
     {
          Ql_OS_GetMessage(&msg);
@@ -141,6 +141,7 @@ void Rtc_handler(u32 rtcId, void* param)
 
     if(Rtc_id == rtcId)
     {
+         APP_DEBUG("\r\n<--OpenCPU: Rtc_handler->\r\n");  
 		//Ql_SleepDisable();
     }
 }
